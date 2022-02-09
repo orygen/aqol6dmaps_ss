@@ -1,0 +1,21 @@
+---
+title: "MA_Results"
+author: "Matthew Hamilton"
+date: "13/10/2020"
+output: html_document
+---
+
+```{r child="MS_Tables.Rmd", echo=FALSE}
+```
+```{r child="MS_Figures.Rmd", echo=FALSE}
+```
+```{r child="MS_Results_Cohort.Rmd", echo=FALSE}
+```
+```{r child="MS_Results_HU_And_Predrs.Rmd", echo=FALSE}
+```
+```{r child="MS_Results_TTU_Mdl_Perf.Rmd", echo=FALSE}
+```
+```{r child="MS_Results_Lngtl_TTU.Rmd", echo=FALSE}
+```
+```{r child="MS_Results_Ratios.Rmd", echo=FALSE}
+```

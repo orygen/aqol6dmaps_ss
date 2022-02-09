@@ -1,0 +1,8 @@
+---
+title: "MS_Intro_Long"
+author: "Matthew Hamilton"
+date: "13/10/2020"
+output: html_document
+---
+
+This article is a scientific summary of a study that the authors implemented using the R package TTU [@TTUPackage] and has been automatically generated from study results by version `r results_ls$version_1L_chr` of TTU's longitudinal modelling manuscript authoring extension [@TTUExtension]. `r get_background_text(results_ls)`
