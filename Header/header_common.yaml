@@ -1,14 +1,49 @@
-title: A hypothetical study using fake data
+title: Mapping psychological distress, depression and anxiety measures to AQoL-6D utility using data from a sample of young people presenting to primary mental health services
 author:
-  - Alejandra R Scienceace:
-      email: fake_email@fake_institute.com
-      institute: [Insitute_A, Institute_B]
+  - Matthew P Hamilton:
+      email: matthew.hamilton@orygen.org.au
+      institute: [Orygen]
       correspondence: true
-  - name: Fionn S Researchchamp
-    email: fake_email@made_up_org.com
-    institute: [Institute_C, Institute_B]
+      equal_contributor: "yes"
+  - name: Caroline X Gao
+    email: caroline.gao@orygen.org.au
+    institute: [Orygen, CYMH, Monash]
+    equal_contributor: "yes"
+  - name: Kate M Filia
+    email: kate.filia@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Jana M Menssink
+    email: jana.menssink@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Sonia  Sharmin
+    institute: [Orygen, CYMH]
+  - name: Nic  Telford
+    email: NTelford@headspace.org.au
+    institute: [Headspace]
+  - name: Helen  Herrman
+    email: helen.herrman@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Ian B Hickie
+    email: ian.hickie@sydney.edu.au
+    institute: [Sydney]
+  - name: Cathrine  Mihalopoulos
+    email: cathy.mihalopoulos@deakin.edu.au
+    institute: [Deakin]
+  - name: Debra J Rickwood
+    email: DRickwood@headspace.org.au
+    institute: [Canberra, Headspace]
+  - name: Patrick D McGorry
+    email: pat.mcgorry@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Sue M Cotton
+    email: sue.cotton@orygen.org.au
+    institute: [Orygen, CYMH]
 institute:
-  - Insitute_A: Awesome University, Shanghai
-  - Institute_B: August Institution, London
-  - Institute_C: Highly Ranked Uni, Montreal
-keywords:  entirely, fake, do, not, cite
+  - Orygen: Orygen, Parkville, Australia
+  - CYMH: Centre for Youth Mental Health; University of Melbourne, Parkville, Australia
+  - Monash: School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
+  - Headspace: headspace National Youth Mental Health Foundation, Melbourne, Australia
+  - Sydney: Brain and Mind Centre, Youth Mental Health & Technology, Faculty of Medicine & Health, The University of Sydney,  Australia
+  - Deakin: Deakin Health Economics, Institute for Health Transformation, Deakin University, Geelong,  Australia
+  - Canberra: Faculty of Health, University of Canberra, Australia
+keywords:  anxiety, AQoL, depression, psychological distress, QALYs, utility mapping

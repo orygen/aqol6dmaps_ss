@@ -5,5 +5,4 @@ date: "26/07/2021"
 output: html_document
 ---
 
-## Within-person to between-person coefficient ratios
-The mean ratio between the within-person and between-person associated coefficients (${\beta}_{change}/{\beta}_{baseline}$) is `r make_within_between_ratios_text(results_ls)`. 
+The coefficients of score change from baseline were generally estimated to be lower compared with coefficients of baseline score (except for SCARED). The mean (across GLMM and LMM models) ratio of the two coefficients (${\beta}_{change}/{\beta}_{baseline}$) is 0.823 for K6, between 0.802 and 0.850 for depression measurements and between 0.900 and 1.086 for anxiety measurements. 

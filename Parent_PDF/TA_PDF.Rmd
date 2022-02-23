@@ -4,16 +4,14 @@ output:
     includes:
       in_header: preamble.tex
     pandoc_args: 
-      - "--metadata-file=../Header/header_common.yaml"
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
     toc: no
+title: Mapping psychological distress, depression and anxiety measures to AQoL-6D utility using data from a sample of young people presenting to primary mental health services
 params:
   X: NULL
 graphics: yes
-csl: plos.csl
-bibliography: ../Data/bib.bib
-subtitle: Suplementary Material
+subtitle: Online Resource
 header-includes:
 - \usepackage{booktabs}
 - \usepackage{longtable}
@@ -35,5 +33,23 @@ library(xtable)
 #options(xtable.floating = FALSE)
 options(xtable.timestamp = "")
 ```
-```{r child="../Child_RMDs/TA_Content.Rmd", echo=FALSE, warning=FALSE}
+```{r echo = F}
+# if(!exists("params_ls")){
+  X <- params$X
+  params_ls<- list(figures_in_body_lgl = X@figures_in_body_lgl,
+                   output_type_1L_chr = X@outp_formats_chr[1],
+                   results_ls = X@b_SpecificResults@a_SpecificShareable@shareable_outp_ls$results_ls,
+                   tables_in_body_lgl = X@tables_in_body_lgl)
+  results_ls <- params_ls$results_ls
+# }
+```
+
+\appendix
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\newpage
+# Supplement to Current Psychology submission
+
+```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE, warning=FALSE}
 ```

@@ -8,44 +8,69 @@ output:
   pdf_document: default
 ---
 ## Sample and setting
-`r results_ls$study_descs_ls$sample_desc_1L_chr`
+This study forms part of a research program to develop better outcome measures for young people seeking mental health support, and the study sample has previously been described [@Filia_2021]. Briefly, young people aged 12 to 25 years who presented for a first appointment for mental health or substance use related issues were recruited from three metropolitan and two regional Australian youth-focused primary mental health clinics (headspace centres) between September 2016 to April 2018. Sample characteristics are similar to previous descriptions of headspace clients, with slight differences in age (less aged 12-14, more aged 18-20), cultural background (more Culturally and Linguistically Diverse and less Aboriginal and Torres Strait Islander young people), sexuality (fewer heterosexual clients) and housing (more in unstable accommodation) [@Filia_2021].
 
 ## Measures
-Data was collected on utility weights, `r get_nbr_of_predrs(results_ls)` candidate predictors of utility weights and descriptive population characteristics. 
+We collected data on utility weights, six candidate predictors of utility weights including psychological distress, depression and anxiety measures as well as demographic, clinical and functional population information.
 
 ### Utility weights
-Utility weights were assessed using the `r get_hlth_utl_nm(results_ls)` multi-attribute utility instrument.
+We assessed utility weights using the adolescent version of the Assessment of Quality of Life – Six Dimension scale (AQoL-6D; [@RN10]) MAUI. It was selected due to its validity for use in adolescents, the relevance of its domains for a clinical mental health sample [@RN6] and its acceptable participant time-burden. The AQoL-6D instrument contains 20 items across the six dimensions of independent living, social and family relationship, mental health, coping, pain and sense. Health utility scores were calculated using a published algorithm (available at https://www.aqol.com.au/index.php/aqolinstruments?id=92), using Australian population preference weights.
 
-### Candidate predictor`r ifelse(get_nbr_of_predrs(results_ls, as_words_1L_lgl = F)>1,"s","")`
-`r make_cndt_predr_text(results_ls)` 
+### Candidate predictors
+Data from six measures of psychological distress (one measure), depression (two measures) and anxiety (three measures) symptoms were used as candidate predictors to construct mapping models. These measures were selected as they are widely used in clinical mental health services or clinically relevant to the profiles of young people seeking mental health care.
 
-`r get_predrs_by_ctg(results_ls, long_desc_1L_lgl = T) %>% paste0(collapse=" ")`
+The Kessler Psychological Distress Scale (K6; [@RN16]) was used to measure psychological distress over the last 30 days. It includes six items (nervousness, hopelessness, restlessness, sadness, effort, and worthlessness) of the 10 item version of this measure, K10. Individual items use a five-point frequency scale that spans from 0 (“none of the time”) to 4 (“all of the time”).
+
+The Patient Health Questionnaire-9 (PHQ-9; [@RN11]) and Behavioural Activation for Depression Scale (BADS; [@RN12]) were used to measure degree of depressive symptomatology. PHQ-9 includes nine questions measuring the frequency of depressive thoughts (including self-harm/suicidal thoughts) as well as associated somatic symptoms (e.g., sleep disturbance, fatigue, anhedonia, appetite, psychomotor changes) in the past two weeks. PHQ-9 uses a four-point frequency scale ranging from 0 (“Not at all”) to 3 (“Nearly every day”). For the PHQ-9 a total score is derived (0-27) with higher scores depicting greater symptom severity. BADS measures a range of behaviours (activation, avoidance/rumination, work/school impairment as well as social impairment) reflecting severity of depression. BADS includes 25 questions on behaviours over the past week, scored on a seven-point scale ranging from 0 (“Not at all”) to 6 (“Completely”). A total score is derived for the BADS (0-150) as well as subscale scores, with higher scores indicating greater activation.
+
+The Generalised Anxiety Disorder Scale (GAD-7; [@RN13]), Screen for Child Anxiety Related Disorders (SCARED; [@RN14]) and Overall Anxiety Severity and Impairment Scale (OASIS; [@RN15]) were used to measure anxiety symptoms. GAD-7 measures symptoms such as nervousness, worrying and restlessness, over the past two weeks using seven questions, with a four-point frequency scale ranging from 0 (“Not at all”) to 3 (Nearly every day”). A total score is calculated with scores ranging from 0 to 21 and higher scores indicating more severe symptomatology. SCARED is an anxiety screening tool designed for children and adolescents which can be mapped directly on specific Diagnostic and Statistical Manual of Mental Disorders (DSM-IV-TR) anxiety disorders including generalised anxiety disorder, panic disorder, separation anxiety disorder and social phobia. It includes 41 questions on a three-point scale of 0 (“Not true or hardly ever true”), 1 “Somewhat True or Sometimes True” and 2 (“Very true or often true”) to measure symptoms over the last three months. A total score is derived with scores ranging from 0-82, with higher scores indicative of the presence of an anxiety disorder. The OASIS was developed as a brief questionnaire to measure severity of anxiety and impairment in clinical populations. The OASIS includes five questions about frequency and intensity of anxiety as well as related impairments such as avoidance, restricted activities and problems with social functioning over the past week. Total scores range from 0-20 with higher scores depicting more severe symptomatology.
 
 ### Population characteristics
-Population characteristic data were `r get_popl_descvs(results_ls)`.
+We collected self-reported measures of demographics (age, gender, sex at birth, education and employment status, languages spoken at home and country of birth). We also collected clinician or research interviewer assessed measures of mental health including primary diagnosis, clinical stage [@McGorry_2006] and functioning (measured by the Social and Occupational Functioning Assessment Scale (SOFAS) [@Goldman_1992]).
+
+## Procedures
+Eligible participants were recruited by trained research assistants and responded to the questionnaire via a tablet device. Participants’ clinical characteristics were obtained from clinical records and research interview. At three-months post-baseline, participants were contacted in person or by telephone, to complete a 3-month follow-up assessment.
 
 ## Statistical analysis
-We implemented the generalised form of the study analysis algorithm developed by Hamilton, Gao and colleagues [@HamiltonGao2021], the key steps of which are summarised as follows.
+We undertook a three-step process to: i) gain insight into our dataset and measures; ii) specify models and assess model performance using cross-sectional data; and iii) specify longitudinal models and assess whether modelling assumptions were met.
 
-### Descriptive statistics
-Basic descriptive statistics were used to characterise the cohort in terms of baseline population variables. Pearson’s Product Moment Correlations (*r*) were used to determine the relationships between candidate predictors and the `r get_hlth_utl_nm(results_ls)` utility score.
+### Pre-modelling steps
+Basic descriptive statistics were used to characterise the cohort in terms of baseline demographics and clinical variables. Pearson’s Product Moment Correlations (*r*) were used to determine the relationships between candidate predictors and the AQoL-6D utility score.
 
-### TTU regression models 
-We compared predictive performance of a range of models predicting `r get_hlth_utl_nm(results_ls)` utility scores using the candidate predictor that had the highest Pearson correlation coefficient with utility scores. The models compared include `r get_mdl_cmprsns(results_ls, describe_1L_lgl = F)`. `r get_mdl_cmprsns(results_ls)`. Ten-fold cross-validation was used to compare model fitting with training datasets and predictive ability with testing datasets using three indicators including R^2^, root mean square error (RMSE) and mean absolute error (MAE)  [@RN20; @RN19].
+### Model specification and assessment (cross-sectional data) 
+Good practice guidance on mapping studies [@Wailoo2017] does not advocate specific model types as the appropriate choice will vary depending on factors that include the health utility measure being mapped to, the applicable health condition and target population, the clinical variables used as predictors and the intended use of the mapping algorithm. Compared to the EQ-5D utility measures most commonly used in the mapping literature [@Mukuria2019], AQOL-6D has better dimensional overlap with mental health measures [RN6] and is derived from a greater number of questionnaire items (which can generate more continuous utility score distributions). The types of models we explored reflected these considerations. 
 
-To evaluate whether candidate predictors could independently predict utility scores, we established multivariate prediction models using baseline data with the candidate predictor and `r get_covar_ctgs(results_ls)` covariates. `r get_covars_by_ctg(results_ls, collapse_1L_lgl = T) %>% paste0(collapse = " ")`
+We used a cross-section of our dataset (baseline measures only) to explore appropriate type(s) of models to use, compare the relative predictive performance of candidate predictors, and identify other potential risk factors associated with quality of life independent of mental health measures. 
 
-`r ifelse(get_nbr_of_predrs(results_ls, as_words_1L_lgl = F)>1,"### Candidate predictor comparison","")`
-`r make_cndt_predr_text(results_ls, type = "comparison")` 
+As AQoL-6D utility score is normally left skewed and constrained between 0 and 1, ordinary least squares (OLS) models with different types of outcome transformations (such as log and logit) have been previously used in mapping [@RN7]. Similarly, generalised linear models (GLMs) address this issue via modelling the distribution of the outcome variable and applying a link function between the outcome and linear combination of predictors [@Dobson_2018]. Beta regressions, which can be considered a special form of GLMs, are another popular strategy for modelling health utility [@Hunger2011]. 
 
-### Longitudinal transfer to utility models
-We next established longitudinal models using `r get_mdl_cmprsns(results_ls, describe_1L_lgl = F, mixed_1L_lgl = T)` that included both the baseline and follow-up data. Model fitting was evaluated using Bayesian R^2^ [@RN21].
+We chose to explore OLS, GLM and beta models with commonly adopted transformation algorithms. The models we selected for comparison were OLS regression with log, logit, log-log ($f(y) = -log(-log(y))$) and clog-log ($f(y) = log(-log(1-y))$) transformation; GLM using Gaussian distribution with log link; and beta regression with logit and clog-log link. For each candidate model type, we evaluated the modelling performance and predictive ability of a univariate model using the candidate predictor with the highest Pearson correlation coefficient with utility scores. Ten-fold cross-validation was used to compare model fitting using training datasets and predictive ability using testing datasets using three indicators including R^2, root mean square error (RMSE) and mean absolute error (MAE) [@RN20; @RN19]. After identifying the best performing model type, we used 10-fold cross-validation to compare predictive ability of six mental health measures in predicting AQol-6D (one model for each candidate predictor). 
 
-### Assessing ability of baseline measures to predict change
-We assessed the potential of our evaluated predictor`r ifelse(get_nbr_of_predrs(results_ls, as_words_1L_lgl = F)>1,"s","")` to predict change in `r get_hlth_utl_nm(results_ls)` when using only baseline measures. This goal can be accomplished by comparing longitudinal TTU model coefficients of each predictor's ${\beta}_{baseline}$ (representing between person variation) and ${\beta}_{change}$ (representing within person variation) parameters [@HamiltonGao2021]. We calculated the ${\beta}_{change}/{\beta}_{baseline}$ ratio for each evaluated single predictor longitudinal TTU model, reporting the mean ratio across all models for `r ifelse(get_nbr_of_predrs(results_ls, as_words_1L_lgl = F)>1,"each","the")` predictor.
+To evaluate whether candidate predictors could independently predict utility scores, we added a range of independent variables to each of the six models that included participants’ age, sex at birth, clinical stage, cultural and linguistic diversity, education and employment status, primary diagnosis, region of residence (whether metropolitan - based on location of attending service) and sexual orientation. Functioning (as measured by SOFAS) was also included in each model to evaluate whether it can jointly predict utility with clinical symptom measurements.
 
-`r ifelse(get_nbr_of_scndry_analyses(results_ls, as_words_1L_lgl = F) == 0,"","### Secondary analyses")`
-`r make_scndry_anlys_text(results_ls)`
 
-### Software
-We undertook all our analyses using  ***R*** `r results_ls$r_version_1L_chr` [@RCitation] using the TTU package [@TTUPackage] (version `r results_ls$version_1L_chr`). 
+### Longitudinal modelling and assumption testing
+After identifying the best mapping regression model(s) for predicting between person change, we established longitudinal models to predict within person change. This was achieved using generalised linear mixed- effect models (GLMM) including both the baseline and follow-up data. All records with complete baseline data (with or without follow-up data) were included. The detailed model is specified in the following equation:
+
+\begin{equation}
+{g(U}_{i,j}{)} = ({\beta}_{0} + {b}_{i}) + {\beta}_{baseline} \times {S}_{i,baseline} + {\beta}_{change} \times \Delta{S}_{i,j} + {\epsilon}_{i,j} 
+ (\#eq:glmbase)
+\end{equation}
+
+$g()$ is the link function of the model; ${U}_{i,j}$  is AQoL-6D utility score of individual $i$ in observation $j$; ${S}_{i,baseline}$ is the baseline distress/depression/anxiety score for individual $i$ and $\Delta{S}_{i,j}$ is the score change from the baseline for individual $i$ at observation $j$. We used ${\beta}_{0}$ to represent fixed intercept, ${b}_{i}$ to represent the random intercept for individual $i$ (controlling for clustering at individual level) and ${\epsilon}_{i,j}$ to represent the random error. Hence for baseline observations $\Delta{S}_{i,j}=0$; and at follow-up $\Delta{S}_{i,j}={S}_{i,follow-up} - {S}_{i,baseline}$. With this parameterisation, ${\beta}_{baseline}$ can be interpreted as between person association and ${\beta}_{change}$ as within person association. When ${\beta}_{baseline}={\beta}_{change}$, Equation `r ready4show::make_eq_ref("glmbase",output_type_1L_chr = params$output_type_1L_chr)` can be generalised to: 
+
+\begin{equation}
+{g(U)}_{i,j} = ({\beta}_{0} + {b}_{i}) + \beta \times {S}_{i,j} + {\epsilon}_{i,j} 
+ (\#eq:glmgen)
+\end{equation}
+
+for both baseline and follow-up observations. The discrepancy between ${\beta}_{baseline}$ and ${\beta}_{change}$ can be interpreted as bias of estimating longitudinal predictive score changes within individuals using cross-sectional score difference between individuals.
+
+Bayesian linear mixed models were used to avoid common convergence problems in frequentist tools [@bolker2009generalized]. Linear mixed effect model (LMM) can be fitted in the same framework with Gaussian distribution and identify link function. Clustering at individual level is controlled via including random intercepts. Model fitting was evaluated using Bayesian R^2^ [@RN21].
+
+
+### Secondary analyses
+We repeated the previous steps to develop additional mapping algorithms - a set of models that used SOFAS as an independent predictor (Secondary Analysis A) and a set of models that combined anxiety and depression predictors (Secondary Analysis B).
+
+## Software
+We undertook all our analyses using  ***R*** 4.0.5 [@RCitation]. We used a wide range of third- party code libraries in the analysis and reporting (see Online Resource, `r ifelse(params$output_type_1L_chr=="Word","","Table")` A.5). To aid study replicability and facilitate appropriate use of the mapping models produced by this study we created R programs and code libraries and an online dataset of model metadata and documentation. Where it is not feasible to publicly release study data, synthetic replication datasets can be useful [@Nowok2016Synthpop]. We created such a dataset and distributed it via an online data repository.

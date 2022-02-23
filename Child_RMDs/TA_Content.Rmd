@@ -5,7 +5,7 @@ date: "28/01/2021"
 output: html_document
 ---
 ```{r echo = F}
-if(!exists(params_ls)){
+if(!exists("params_ls")){
   X <- params$X
   params_ls<- list(figures_in_body_lgl = X@figures_in_body_lgl,
                    output_type_1L_chr = X@outp_formats_chr[1],

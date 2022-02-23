@@ -19,7 +19,7 @@ bibliography: ../Data/references.bib
 ```{r child="../Child_RMDs/MS_Results.Rmd", echo=FALSE}
 ```
 
-<!-- # Discussion -->
+# Discussion
 ```{r child="../Child_RMDs/MS_Discussion.Rmd", echo=FALSE}
 ```
 
@@ -35,10 +35,10 @@ bibliography: ../Data/references.bib
 ```{r child="../Child_RMDs/MS_Ethics.Rmd", echo=FALSE}
 ```
 
-## Funding {-#funding}
-```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE}
-```
+<!-- ## Funding {-#funding} -->
+<!-- ```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE} -->
+<!-- ``` -->
 
-## Conflict of Interest {-#conflict-of-interest}
+## Competing interests {-#conflict-of-interest}
 ```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
 ```

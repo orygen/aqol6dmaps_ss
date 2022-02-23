@@ -30,16 +30,87 @@ graphics: yes
 csl: plos.csl
 ---
 
+```{r echo=FALSE}
+print_indpnt_predrs_coefs_tbl <- function(params_ls,
+                                          caption_1L_chr,
+                                          mkdn_tbl_ref_1L_chr){
+  results_ls <- params_ls$results_ls
+  tb <- results_ls$tables_ls$ind_preds_coefs_tbl %>%
+    transform_nms_in_mdl_tbl(col_nm_1L_chr = "Parameter",
+                             var_nm_change_lup = results_ls$var_nm_change_lup)
+  if(params_ls$output_type_1L_chr =="Word"){
+    tb$Parameter <- stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(tb$Parameter, '\\\\textbf', ''), '\\{', ''), '\\}', '')
+  }
+  if(params_ls$output_type_1L_chr == "PDF"){
+    tb %>%
+      dplyr::mutate(dplyr::across(.cols = everything(),
+                                  ~ dplyr::case_when(is.na(.x) ~ "",
+                                                     T ~ .x))) %>%
+      kableExtra::kbl(booktabs = T,
+                      caption = knitr::opts_current$get("tab.cap"),
+                      escape = F,
+                      longtable = T,
+                      col.names = c("Parameter", "Estimate",	"SE",	"CI (95\\%)", "R2", "Sigma", "Estimate", "SE", "CI (95\\%)", "R2", "Sigma")) %>%
+      kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+      kableExtra::column_spec(3:6, width = "3em") %>%
+      kableExtra::row_spec(which(!is.na(tb[,5])), bold = T) %>%
+      #kableExtra::column_spec(1, bold = T, width = "14em") %>%
+      kableExtra::add_header_above(parse(text=paste0("c(",
+                                                     "\" \"",
+                                                     ", ",
+                                                     paste0("\"",
+                                                            results_ls$ttu_lngl_ls$best_mdls_tb[[1,"model_type"]],
+                                                            " - ",
+                                                            results_ls$ttu_lngl_ls$best_mdls_tb[[1,"link_and_tfmn_chr"]],
+                                                            "\" = 5"),
+                                                     ", ",
+                                                     paste0("\"",
+                                                            results_ls$ttu_lngl_ls$best_mdls_tb[[2,"model_type"]],
+                                                            " - ",
+                                                            results_ls$ttu_lngl_ls$best_mdls_tb[[2,"link_and_tfmn_chr"]],
+                                                            "\" = 5"),
+                                                     ")"
+      )) %>% eval()
+      ) %>%
+      kableExtra::collapse_rows(columns = 1) %>%
+      kableExtra::footnote(general = make_scaling_text(results_ls),
+                           general_title = " ")
+  }else{
+    add_to_row_ls <- NULL
+    tb %>%
+    ready4show::print_table(output_type_1L_chr = params_ls$output_type_1L_chr,
+                            caption_1L_chr = caption_1L_chr,
+                            mkdn_tbl_ref_1L_chr = mkdn_tbl_ref_1L_chr,
+                            use_rdocx_1L_lgl = ifelse(params_ls$output_type_1L_chr=="Word",T,F),
+                            add_to_row_ls = add_to_row_ls,
+                            footnotes_chr = make_scaling_text(results_ls),
+                            sanitize_fn = force)
+  }
+}
+```
+
 ```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE, warning=FALSE}
 ```
 
 \newpage
 
 ```{r results='asis', warning=F, echo = F}
-abstract_chr <- paste0(stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(readLines('../Header/abstract.txt'),'\\\\\\\\textbf',''),'\\{','**'),'\\}','**'),'\\\\\\\\newline','\\\n')) 
-writeLines(c("**Abstract**",'\\\n',abstract_chr))
+# abstract_chr <- paste0(stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(readLines('../Header/abstractWord.txt'),'\\\\\\\\textbf',''),'\\{','**'),'\\}','**'),'\\\\\\\\newline','\\\n')) 
+writeLines(c("**Abstract**"
+             #,'\\\n',abstract_chr
+             ))
 ```
-
+Background: Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet utility weights for deriving them are rarely directly measured in mental health services.
+Objectives:  
+We aimed to identify the best mapping models and predictors for Assessment of Quality of Life - Six Dimensions (AQOL-6D) utility and assess the ability of mapping models to predict longitudinal change.
+Methods: 
+We recruited 1107 young people attending Australian primary mental health services, collecting data at two time points, three months apart. Five linear and three generalised linear models were explored to identify the best mapping model. Ten-fold cross-validation using R$^2$, root mean square error (RMSE) and mean absolute error (MAE) were used to compare models and assess predictive ability of six candidate measures of psychological distress, depression and anxiety. Linear / generalised linear mixed effect models were used to construct longitudinal predictive models for AQoL-6D change.
+Results: 
+A depression measure (Patient Health Questionnaire-9) was the strongest independent predictor of health utility. Linear regression models with complementary log-log transformation of utility score were the best performing models. Between-person associations were slightly larger than within-person associations for most of the predictors.
+Conclusions: 
+Adolescent AQoL-6D utility can be derived from a range of psychological distress, depression and anxiety measures. Mapping models estimated from cross-sectional data can approximate longitudinal change but may slightly bias health utility predictions.
+Data: 
+Replication code, detailed results and guidance on how to apply the models produced by this study are available in the online repository: https://doi.org/10.7910/DVN/DKDIB0.
 \newpage
 
 ```{r child="../Child_RMDs/All_Content.Rmd", echo=FALSE, warning=FALSE}

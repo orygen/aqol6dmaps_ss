@@ -6,6 +6,7 @@ output: html_document
 
 ```{r {{coefscovarstype}}, tab.cap=make_covar_ttu_tbl_title(results_ls, ref_1L_int ={{ref_1L_int}}), tab.id = '{{coefscovarstype}}', echo = F, results = 'asis'}
 print_covar_ttu_tbls(params_ls,
+                     column_1_width_1L_chr = "20em", 
                      caption_1L_chr = knitr::opts_current$get("tab.cap"),
                      table_1L_chr = knitr::opts_current$get("tab.id"),
                      ref_1L_int = {{ref_1L_int}})

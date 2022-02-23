@@ -1,24 +1,24 @@
 \\textbf{Background: }
-Brief background to study goes here.
+Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet utility weights for deriving them are rarely directly measured in mental health services.
 \\newline
 \\newline
 \\textbf{Objectives: }
-Brief study objectives goes here.
+We aimed to identify the best regression models to predict AQOL-6D (weighted total) (aqol6dtotalw) utility and evaluate the predictive ability of six candidate measures of depression, anxiety and psychological distress.
 \\newline
 \\newline
 \\textbf{Methods: }
-Brief description of methods goes here.
+ Follow-up measurements were three months after baseline. Five Ordinary Least Squares (OLS) and three generalised linear models (GLMs) were explored to identify the best algorithm.  Predictive ability of six candidate measures of depression, anxiety and psychological distress were assessed using ten fold cross validation and forest models. Linear / generalised linear mixed effect models were then used to construct longitudinal predictive models for aqol6dtotalw change.
 \\newline
 \\newline
 \\textbf{Results: }
-Brief summary of results goes here.
+PHQ-9 had the highest predictive ability in ten fold cross validation and the random forest model. GLM with Gaussian distribution and log link and OLS with complementary log log transformation were the best peforming models. The mean ratio between the within-person and between-person associated coefficients was between 0.802 and 0.85 for depression measurements, between 0.802 and 0.85 for depression measurements, between 0.9 and 1.086 for anxiety measurements, between 0.9 and 1.086 for anxiety measurements, between 0.9 and 1.086 for anxiety measurements and 0.823 for K6.
 \\newline
 \\newline
 \\textbf{Conclusions: }
-Headline conclusions go here.
+Adolescent AQoL-6D utility can be derived from a range of psychological distress, depression and anxiety measures. TTU algorithms estimated from cross-sectional data can approximate longitudinal change but may slightly bias QALY predictions.
 \\newline
 \\newline
 \\textbf{Data: }
-Statement about availability of study data and materials goes here.
+Detailed results in the form of catalogues of the models produced by this study and other supporting information are available in the online repository: https://doi.org/10.7910/DVN/DKDIB0
 \\newline
 \\newline

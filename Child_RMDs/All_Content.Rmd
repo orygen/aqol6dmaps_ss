@@ -47,7 +47,7 @@ if(!params_ls$figures_in_body_lgl){
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-# Supplementary Material
+<!-- # Supplementary Material -->
 
-```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE}
-```
+<!-- ```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE} -->
+<!-- ``` -->
