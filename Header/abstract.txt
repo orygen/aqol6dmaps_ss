@@ -3,15 +3,15 @@ Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet 
 \\newline
 \\newline
 \\textbf{Objectives: }
-We aimed to identify the best regression models to predict AQOL-6D (weighted total) (aqol6dtotalw) utility and evaluate the predictive ability of six candidate measures of depression, anxiety and psychological distress.
+We aimed to identify the best regression models to predict Adolescent AQoL Six Dimension (AQoL-6D) utility and evaluate the predictive ability of six candidate measures of depression, anxiety and psychological distress.
 \\newline
 \\newline
 \\textbf{Methods: }
- Follow-up measurements were three months after baseline. Five Ordinary Least Squares (OLS) and three generalised linear models (GLMs) were explored to identify the best algorithm.  Predictive ability of six candidate measures of depression, anxiety and psychological distress were assessed using ten fold cross validation and forest models. Linear / generalised linear mixed effect models were then used to construct longitudinal predictive models for aqol6dtotalw change.
+ Follow-up measurements were three months after baseline. Five Ordinary Least Squares (OLS) and three generalised linear models (GLMs) were explored to identify the best algorithm.  Predictive ability of six candidate measures of depression, anxiety and psychological distress were assessed using ten fold cross validation and forest models. Linear / generalised linear mixed effect models were then used to construct longitudinal predictive models for AQoL-6D change.
 \\newline
 \\newline
 \\textbf{Results: }
-PHQ-9 had the highest predictive ability in ten fold cross validation and the random forest model. GLM with Gaussian distribution and log link and OLS with complementary log log transformation were the best peforming models. The mean ratio between the within-person and between-person associated coefficients was between 0.802 and 0.85 for depression measurements, between 0.802 and 0.85 for depression measurements, between 0.9 and 1.086 for anxiety measurements, between 0.9 and 1.086 for anxiety measurements, between 0.9 and 1.086 for anxiety measurements and 0.823 for K6.
+PHQ-9 had the highest predictive ability in ten fold cross validation and the random forest model. GLM with Gaussian distribution and log link and OLS with complementary log log transformation were the best peforming models. The mean ratio between the within-person and between-person associated coefficients was between 0.801 and 0.85 for depression measurements, between 0.9 and 1.087 for anxiety measurements and 0.824 for K6.
 \\newline
 \\newline
 \\textbf{Conclusions: }

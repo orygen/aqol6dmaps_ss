@@ -4,14 +4,15 @@ output:
     includes:
       in_header: preamble.tex
     pandoc_args: 
+      - "--metadata-file=../Header/header_common.yaml"
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
     toc: no
-title: Mapping psychological distress, depression and anxiety measures to AQoL-6D utility using data from a sample of young people presenting to primary mental health services
+# title: Mapping psychological distress, depression and anxiety measures to AQoL-6D utility using data from a sample of young people presenting to primary mental health services
 params:
   X: NULL
 graphics: yes
-subtitle: Online Resource
+subtitle: Supplementary Information
 header-includes:
 - \usepackage{booktabs}
 - \usepackage{longtable}
@@ -49,7 +50,7 @@ options(xtable.timestamp = "")
 \counterwithin{table}{section}
 
 \newpage
-# Supplement to submitted manuscript
+# Supplement to manuscript preprint
 
 ```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE, warning=FALSE}
 ```
