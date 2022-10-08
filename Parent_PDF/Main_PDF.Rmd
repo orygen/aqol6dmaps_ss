@@ -15,35 +15,35 @@ output:
       - '--lua-filter=../Filters/author-info-blocks.lua'
     toc: no
     keep_tex: true
-# authors:
-#   - name: Matthew P Hamilton
-#     email: matthew.hamilton@orygen.org.au
-#     address: Orygen, Parkville, Australia
-#     correspondence: true
-#     equal_contributor: "yes"
-#   - name: Caroline X Gao
-#     address: Orygen, Parkville, Australia, Centre for Youth Mental Health, University of Melbourne, Parkville, Australia and School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
-#     equal_contributor: "yes"
-#   - name: Kate M Filia
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Jana M Menssink
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Sonia  Sharmin
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Nic Telford
-#     address: headspace National Youth Mental Health Foundation, Melbourne, Australia
-#   - name: Helen Herrman
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Ian B Hickie
-#     address: Brain and Mind Centre, Youth Mental Health & Technology, Faculty of Medicine & Health, The University of Sydney,  Australia
-#   - name: Cathrine  Mihalopoulos
-#     address: Deakin Health Economics, Institute for Health Transformation, Deakin University, Geelong,  Australia
-#   - name: Debra J Rickwood
-#     address: Faculty of Health, University of Canberra, Australia and headspace National Youth Mental Health Foundation, Melbourne, Australia
-#   - name: Patrick D McGorry
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Sue M Cotton
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
+authors:
+  - name: Matthew P Hamilton
+    email: matthew.hamilton@orygen.org.au
+    address: Orygen, Parkville, Australia
+    correspondence: true
+    equal_contributor: "yes"
+  - name: Caroline X Gao
+    address: Orygen, Parkville, Australia, Centre for Youth Mental Health, University of Melbourne, Parkville, Australia and School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
+    equal_contributor: "yes"
+  - name: Kate M Filia
+    address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
+  - name: Jana M Menssink
+    address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
+  - name: Sonia  Sharmin
+    address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
+  - name: Nic Telford
+    address: headspace National Youth Mental Health Foundation, Melbourne, Australia
+  - name: Helen Herrman
+    address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
+  - name: Ian B Hickie
+    address: Brain and Mind Centre, Youth Mental Health & Technology, Faculty of Medicine & Health, The University of Sydney,  Australia
+  - name: Cathrine  Mihalopoulos
+    address: Deakin Health Economics, Institute for Health Transformation, Deakin University, Geelong,  Australia
+  - name: Debra J Rickwood
+    address: Faculty of Health, University of Canberra, Australia and headspace National Youth Mental Health Foundation, Melbourne, Australia
+  - name: Patrick D McGorry
+    address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
+  - name: Sue M Cotton
+    address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
 params:
   X: NULL
 abstract: |
@@ -58,7 +58,7 @@ graphics: yes
 # subtitle: Do you have a subtitle? If so, write it here
 title: Mapping psychological distress, depression and anxiety measures to adolescent AQoL-6D utility using data from a sample of young people presenting to primary mental health services
 titlerunning: Mapping mental health measures to AQoL-6D utility
-#authorrunning: Hamilton, Gao, Filia et al.
+authorrunning: Hamilton, Gao, Filia et al.
 thanks: | 
     The study was funded by the National Health and Medical Research Council (NHMRC, APP1076940), Orygen and headspace. 
 keywords: anxiety, AQoL, depression, psychological distress, QALYs, utility mapping
