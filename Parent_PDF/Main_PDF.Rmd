@@ -16,7 +16,7 @@ output:
     toc: no
     keep_tex: true
 authors:
-  - name: Matthew P Hamilton
+  - name: Matthew P Hamilton*
     email: matthew.hamilton@orygen.org.au
     address: Orygen, Parkville, Australia
     correspondence: true
@@ -72,6 +72,7 @@ keywords: anxiety, AQoL, depression, psychological distress, QALYs, utility mapp
 
 bibliography: ../Data/submissionRefs.bib
 biblio-style: spbasic
+csl: springer-basic-brackets.csl
 # bibstyle options spbasic(default), spphys, spmpsci
 header-includes:
 - \usepackage{booktabs}
@@ -87,6 +88,7 @@ header-includes:
 - \usepackage[normalem]{ulem}
 - \usepackage{threeparttablex}
 - \usepackage{makecell}
+- \usepackage{natbib}
 ---
 
 ```{r echo = F, warning=FALSE}
