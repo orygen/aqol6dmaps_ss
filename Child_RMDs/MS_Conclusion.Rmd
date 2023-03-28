@@ -3,4 +3,4 @@ title: "MS_Conclusion"
 output: html_document
 ---
 
-We have found that it is possible to predict both within-person and between-person differences in adolescent AQOL-6D utility weights from measures routinely collected in youth mental health services. Mapping algorithms developed from cross-sectional data can approximate longitudinal changes in health utility, but may slightly over-estimate these changes. The mapping algorithms we have developed can help inform resource allocation decisions relating to the mental health of young people. Our replication toolkits also provide a basis for future research that extends our work with additional mapping algorithms.
+We have found that it is possible to predict both within-person and between-person differences in adolescent AQOL-6D utility weights from measures routinely collected in youth mental health services. Mapping algorithms developed from cross-sectional data can approximate longitudinal changes in health utility, but may slightly over-estimate these changes. The mapping algorithms we have developed can enable greater use of CUAs in economic evaluations using youth mental health data collections.

@@ -100,17 +100,14 @@ writeLines(c("**Abstract**"
              #,'\\\n',abstract_chr
              ))
 ```
-Background: Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet utility weights for deriving them are rarely directly measured in mental health services.
 Objectives:  
-We aimed to identify the best mapping models and predictors for Assessment of Quality of Life - Six Dimensions (AQOL-6D) utility and assess the ability of mapping models to predict longitudinal change.
+We aimed to identify the best models and predictors to map psychological measures to adolescent Assessment of Quality of Life - Six Dimensions (AQOL-6D) utility and assess the ability of these models to predict longitudinal utility change. 
 Methods: 
-We recruited 1107 young people attending Australian primary mental health services, collecting data at two time points, three months apart. Five linear and three generalised linear models were explored to identify the best mapping model. Ten-fold cross-validation using R$^2$, root mean square error (RMSE) and mean absolute error (MAE) were used to compare models and assess predictive ability of six candidate measures of psychological distress, depression and anxiety. Linear / generalised linear mixed effect models were used to construct longitudinal predictive models for AQoL-6D change.
+We recruited 1107 young people attending Australian primary mental health services, collecting data at two time points, three months apart. Five linear and three generalised linear models were explored to identify the best mapping model. Ten-fold cross-validation using R$^2$, root mean square error (RMSE) and mean absolute error (MAE) were used to compare models and assess predictive ability of six candidate measures of psychological distress (Kessler Psychological Distress Scale), depression (Patient Health Questionnaire-9 and Behavioural Activation for Depression Scale) and anxiety (Generalised Anxiety Disorder Scale, Screen for Child Anxiety Related Disorders and Overall Anxiety Severity and Impairment Scale). Linear / generalised linear mixed effect models were used to construct longitudinal predictive models. 
 Results: 
-A depression measure (Patient Health Questionnaire-9) was the strongest independent predictor of health utility. Linear regression models with complementary log-log transformation of utility score were the best performing models. Between-person associations were slightly larger than within-person associations for most of the predictors.
+A depression measure (Patient Health Questionnaire-9) was the strongest independent predictor of health utility. Linear regression models with complementary log-log transformation of utility score were the best performing models. Between-person associations were slightly larger than within-person associations for most of the predictors. 
 Conclusions: 
-Adolescent AQoL-6D utility can be derived from a range of psychological distress, depression and anxiety measures. Mapping models estimated from cross-sectional data can approximate longitudinal change but may slightly bias health utility predictions.
-Data: 
-Replication code, detailed results and guidance on how to apply the models produced by this study are available in the online repository: https://doi.org/10.7910/DVN/DKDIB0.
+Adolescent AQoL-6D utility can be derived from a range of psychological distress, depression and anxiety measures. Mapping models estimated from cross-sectional data can approximate longitudinal change but may slightly bias health utility predictions.  The mapping models we have created can facilitate economic evaluations of youth mental health services using cost-utility analyses.
 \newpage
 
 ```{r child="../Child_RMDs/All_Content.Rmd", echo=FALSE, warning=FALSE}
