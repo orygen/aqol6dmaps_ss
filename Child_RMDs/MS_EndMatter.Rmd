@@ -1,0 +1,22 @@
+---
+title: "MS_EndMatter"
+author: "Matthew Hamilton"
+date: "31/03/2023"
+output: html_document
+---
+
+## Availability of data and materials 
+```{r child="../Child_RMDs/MS_Available_Data_And_Resources.Rmd", echo=FALSE}
+```
+
+## Ethics approval 
+```{r child="../Child_RMDs/MS_Ethics.Rmd", echo=FALSE}
+```
+
+<!-- ## Funding {-#funding} -->
+<!-- ```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE} -->
+<!-- ``` -->
+
+## Competing interests 
+```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
+```

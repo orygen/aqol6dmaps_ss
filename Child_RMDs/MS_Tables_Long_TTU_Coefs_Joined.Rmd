@@ -4,7 +4,7 @@ author: "Matthew Hamilton"
 date: "27/01/2021"
 output: html_document
 ---
-\blandscape
+<!-- \blandscape -->
 <!---BLOCK_LANDSCAPE_START--->
 
 ```{r cfscl, tab.cap='Estimated coefficients from longitudinal mapping models', tab.id = 'cfscl', results="asis"}
@@ -14,5 +14,5 @@ print_indpnt_predrs_coefs_tbl(params_ls,
 
 ```
 
-\elandscape
+<!-- \elandscape -->
 <!---BLOCK_LANDSCAPE_STOP--->

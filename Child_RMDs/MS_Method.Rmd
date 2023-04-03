@@ -61,4 +61,4 @@ Bayesian linear mixed models were used to avoid common convergence problems in f
 We compared the model coefficients for each predictor’s score at baseline and score change from baseline to assess the potential bias of estimating score changes within individuals using score difference between individuals.
 
 ## Replicability
-We undertook all our analyses using  ***R*** 4.0.5 [@RCitation], using a wide range of packages (see Online Supplement, `r ifelse(params$output_type_1L_chr=="Word","","Table")` A.5). We created such a dataset and distributed it via an online data repository. We distributed code, data and documentation in online repositories (see Availability of Data and Materials). 
+We undertook all our analyses using  ***R*** 4.0.5 [@RCitation], using a wide range of packages (see Online Supplement, `r ifelse(params$output_type_1L_chr=="Word","","Table")` A.5). To aid study replication and appropriate out of sample use of our mapping models, we developed R packages, programs and reporting templates, which we disseminated along with data and documentation in online repositories (see Data Availability Statement). 

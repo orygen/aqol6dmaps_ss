@@ -1,0 +1,6 @@
+---
+output: 
+  bookdown::pdf_document2:
+    template: Copy.tex
+bibliography: RefCopy.bib
+---

@@ -46,5 +46,7 @@ library(xtable)
 #options(xtable.floating = FALSE)
 options(xtable.timestamp = "")
 ```
+```{r child="../Child_RMDs/XX_Funs.Rmd", echo=FALSE}
+```
 ```{r child="../Child_RMDs/All_Content.Rmd", echo=FALSE, warning=FALSE}
 ```

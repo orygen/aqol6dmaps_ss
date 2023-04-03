@@ -11,19 +11,42 @@ X <- params$X
 params_ls<- list(figures_in_body_lgl = X@figures_in_body_lgl,
                  output_type_1L_chr = X@outp_formats_chr[1],
                  results_ls = X@b_SpecificResults@a_SpecificShareable@shareable_outp_ls$results_ls,
-                 tables_in_body_lgl = X@tables_in_body_lgl)
+                 tables_in_body_lgl = X@tables_in_body_lgl,
+                 endmatter_1L_lgl = params$endmatter)
 results_ls <- params_ls$results_ls
 ```
 
-```{r child="../Child_RMDs/XX_Funs.Rmd", echo=FALSE}
-```
 ```{r child="../Child_RMDs/MS_Body.Rmd", echo=FALSE}
 ```
 
-\newpage
-# References {-}
+<!-- \newpage -->
+<!-- # References  -->
 
-<div id="refs"></div>
+<!-- <div id="refs"></div> -->
+\paragraph{Funding Statement}
+
+```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE}
+```
+
+\paragraph{Competing Interests}
+
+```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
+```
+
+\paragraph{Data Availability Statement}
+
+```{r child="../Child_RMDs/MS_Available_Data_And_Resources.Rmd", echo=FALSE}
+```
+
+
+\printendnotes
+
+\printbibliography
+
+\clearpage
+
+\appendix
+
 ```{r echo=FALSE}
 if(!params_ls$tables_in_body_lgl){
   child_docs_1L_chr <- c("../Child_RMDs/MS_Cndl_Child_Not_In_Body.Rmd")
@@ -42,10 +65,11 @@ if(!params_ls$figures_in_body_lgl){
 
 ```{r, child = child_figs_1L_chr, echo=FALSE}
 ```
+
 \newpage
-\appendix
-\counterwithin{figure}{section}
-\counterwithin{table}{section}
+
+<!-- \counterwithin{figure}{section} -->
+<!-- \counterwithin{table}{section} -->
 
 <!-- # Supplementary Material -->
 

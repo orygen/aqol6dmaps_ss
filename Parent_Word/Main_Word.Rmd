@@ -1,5 +1,5 @@
 ---
-bibliography: ../Data/bib.bib
+bibliography: ../Data/submissionRefs.bib #../Data/bib.bib
 output:
   bookdown::markdown_document2:
     base_format: "officedown::rdocx_document"
@@ -25,17 +25,22 @@ output:
       - '--lua-filter=../Filters/author-info-blocks.lua'
       - '--lua-filter=../Filters/pagebreaks.lua'
 params:
+  endmatter: TRUE   
   X: NULL
 graphics: yes
 csl: plos.csl
 ---
+
+```{r child="../Child_RMDs/XX_Funs.Rmd", echo=FALSE}
+```
 
 ```{r echo=FALSE}
 print_indpnt_predrs_coefs_tbl <- function(params_ls,
                                           caption_1L_chr,
                                           mkdn_tbl_ref_1L_chr){
   results_ls <- params_ls$results_ls
-  tb <- results_ls$tables_ls$ind_preds_coefs_tbl %>%
+  tb <- results_ls$tables_ls$ind_preds_coefs_tbl %>% 
+    dplyr::mutate(dplyr::across(starts_with("CI_"),~purrr::map_chr(.x,~ifelse(is.na(.x),.x,paste0("(",.x,")"))))) %>% # New
     transform_nms_in_mdl_tbl(col_nm_1L_chr = "Parameter",
                              var_nm_change_lup = results_ls$var_nm_change_lup)
   if(params_ls$output_type_1L_chr =="Word"){

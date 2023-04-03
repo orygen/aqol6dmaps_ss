@@ -4,15 +4,15 @@ output:
     includes:
       in_header: preamble.tex
     pandoc_args: 
-      - "--metadata-file=../Header/header_common.yaml"
+#      - "--metadata-file=../Header/header_common.yaml"
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
     toc: no
-title: Mapping psychological distress, depression and anxiety measures to AQoL-6D utility using data from a sample of young people presenting to primary mental health services
+title: "`r params$X@title_1L_chr`" 
 params:
   X: NULL
 graphics: yes
-subtitle: Online Resource
+subtitle: Online Supplement
 header-includes:
 - \usepackage{booktabs}
 - \usepackage{longtable}

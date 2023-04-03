@@ -3,4 +3,4 @@ title: "MS_Available_Data_And_Resources"
 output: html_document
 ---
 
-Utility mapping models, instructions on how to apply them and study replication code are distributed as part of the study data repository (https://doi.org/10.7910/DVN/DKDIB0).
+Utility mapping models, instructions on how to apply them and study replication code are distributed as part of the study data repository (\url{https://doi.org/10.7910/DVN/DKDIB0}). R packages are available for replicating and  transferring study methods (\url{https://ready4-dev.github.io/TTU/}) and applying the mapping models to out of sample data (\url{https://ready4-dev.github.io/youthu/)}.

@@ -1,0 +1,64 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.9)  29 MAR 2023 18:00
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**sample.tex
+(./sample.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-02> (./cup-journal.cls
+Document Class: cup-journal 2023/01/02 v1.2 Submission to CUP journals
+(/Users/mahamilton/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/Users/mahamilton/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (./lastpage.sty
+Package: lastpage 2011/02/01 v1.2g Refers to last page's name (HMM; JPG)
+) (/Users/mahamilton/Library/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks16
+\labelindent=\skip50
+\enit@outerparindent=\dimen141
+\enit@toks=\toks17
+\enit@inbox=\box51
+\enit@count@id=\count193
+\enitdp@description=\count194
+) (/Users/mahamilton/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box52
+)
+
+! LaTeX Error: File `endnotes.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.47 \newcommand
+                *{\printendnotes}{%^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 691 strings out of 478024
+ 11495 string characters out of 5839035
+ 1849346 words of memory out of 5000000
+ 20924 multiletter control sequences out of 15000+600000
+ 512287 words of font info for 32 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 48i,0n,52p,181b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

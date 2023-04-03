@@ -8,8 +8,10 @@ output: html_document
 
 ```{r, child = '../Child_RMDs/MS_Tables_Cohort_Profile.RMD', echo=FALSE}
 ```
-\newpage
+
+
 ```{r, child = '../Child_RMDs/MS_Tables_Predrs_Cors.RMD', echo=FALSE}
 ```
+
 ```{r, child = '../Child_RMDs/MS_Tables_Long_TTU_Coefs.RMD', echo=FALSE}
 ```

@@ -27,18 +27,14 @@ bibliography: ../Data/references.bib
 ```{r child="../Child_RMDs/MS_Conclusion.Rmd", echo=FALSE}
 ```
 
-## Availability of data and materials {-#availability-of-data-and-materials}
-```{r child="../Child_RMDs/MS_Available_Data_And_Resources.Rmd", echo=FALSE}
+```{r}
+if(params_ls$endmatter_1L_lgl){
+  endmatter_1L_chr <- "../Child_RMDs/MS_EndMatter.Rmd" 
+}else{
+  endmatter_1L_chr <- NULL
+}
+
 ```
 
-## Ethics approval {-}
-```{r child="../Child_RMDs/MS_Ethics.Rmd", echo=FALSE}
-```
-
-<!-- ## Funding {-#funding} -->
-<!-- ```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE} -->
-<!-- ``` -->
-
-## Competing interests {-#conflict-of-interest}
-```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
+```{r child=endmatter_1L_chr, echo=FALSE}
 ```
