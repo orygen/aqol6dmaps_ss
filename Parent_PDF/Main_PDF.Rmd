@@ -1,99 +1,263 @@
 ---
+# Supported options: 
+#   sn-nature:       Style for submissions to Nature Portfolio journals
+#   sn-basic:        Basic Springer Nature Reference Style/Chemistry Reference Style
+#   sn-mathphys:     Math and Physical Sciences Reference Style
+#   sn-aps:          American Physical Society (APS) Reference Style
+#   sn-vancouver:    Vancouver Reference Style
+#   sn-apa:          APA Reference Style 
+#   sn-chicago:      Chicago-based Humanities Reference Style
+#   default:         Default
+
+classoptions: 
+  - sn-vancouver      
+  - Numbered      # Optional: Use numbered references instead of namedate references (only for sn-nature, sn-basic, sn-vancouver, sn-chicago, sn-mathphys or sn-nature)
+  # - referee       # Optional: Use double line spacing 
+  # - lineno        # Optional: Add line numbers
+  # - iicol         # Optional: Double column layour
+
+title: "`r params$X@title_1L_chr`" 
+titlerunning: Mapping psychological measures to health utility
+
+# authors:
+
+authors: 
+  - firstname: Matthew
+    particle: P 
+    lastname: Hamilton
+    email: matthew.hamilton1@monash.edu
+    affiliation: [2,1]
+    corresponding: TRUE
+  # - prefix: Mr.
+    #suffix: III
+    #naturename: Poet Laureate
+    # degrees: MSc #, PhD
+    equalcont: These authors contributed equally to this work.
+    
+  - firstname: Caroline
+    lastname: Gao
+    #     email: caroline.gao@orygen.org.au
+    affiliation: [2,3,1]
+    equalcont: These authors contributed equally to this work.
+
+  - firstname: Kate  
+    particle: M
+    lastname: Filia
+    #     email: kate.filia@orygen.org.au
+    affiliation: [2,3]
+
+  - firstname: Jana
+    particle: M
+    lastname: Menssink
+    #     email: jana.menssink@orygen.org.au
+    affiliation: [2,3]
+
+  - firstname: Sonia
+    #particle: M
+    lastname: Sharmin
+    #     email: jana.menssink@orygen.org.au
+    affiliation: [2,3]
+
+  - firstname: Nic
+    #particle: M
+    lastname: Telford
+    #     email: jana.menssink@orygen.org.au
+    affiliation: [4]
+
+  - firstname: Helen
+    #particle: M
+    lastname: Herrman
+    #     email: jana.menssink@orygen.org.au
+    affiliation: [2,3]
+
+  - firstname: Ian
+    particle: B
+    lastname: Hickie
+    #     email: jana.menssink@orygen.org.au
+    affiliation: [5]
+
+  - firstname: Cathrine
+    lastname: Mihalopoulos
+    #     email: cathy.mihalopoulos@deakin.edu.au
+    affiliation: [1]  
+
+  - firstname: Debra
+    particle: J
+    lastname: Rickwood
+    #     email: jana.menssink@orygen.org.au
+    affiliation: [4,6]
+    
+  - firstname: Patrick 
+    particle: D 
+    lastname: McGorry
+    #     email: pat.mcgorry@orygen.org.au
+    affiliation: [2,3]
+
+  - firstname: Sue
+    particle: M
+    lastname: Cotton
+    #     email: sue.cotton@orygen.org.au
+    affiliation: [2,3]
+    
+affiliations:
+  - number: 1
+    corresponding: TRUE
+    info:
+      orgdiv: School of Public Health and Preventive Medicine
+      orgname: Monash University
+    address:
+        #street: "553 St Kilda Road"
+        city: Melbourne
+        #postcode: 3004
+        #state: Victoria
+        country: Australia
+  - number: 2
+    corresponding: FALSE
+    info:
+      orgname: Orygen
+    address:
+     #   street: "35 Poplar Road"
+        city: Parkville
+        # postcode: 3052
+        #state: Victoria
+        country: Australia
+  - number: 3
+    corresponding: FALSE
+    info:
+      orgdiv: Centre for Youth Mental Health
+      orgname: The University of Melbourne
+    address:
+     #   street: "35 Poplar Road"
+        city: Parkville
+        # postcode: 3052
+    #   state: Victoria
+        country: Australia
+  - number: 4
+    corresponding: FALSE
+    info:
+#      orgdiv: XXXXXXXXXXX
+      orgname: headspace National Youth Mental Health Foundation   
+    address:
+    #  #   street: "485 La Trobe St"
+        city: Melbourne
+    #     postcode: 3000
+    #  #   state: Victoria
+        country: Australia     
+        #   - name: Ian B Hickie
+  - number: 5
+    corresponding: FALSE
+    info:
+      orgdiv: Brain and Mind Centre, Youth Mental Health & Technology
+      orgname: University of Sydney 
+    address:
+    #  #   street: "70/104 Ballarat Rd"
+        city: Camperdown
+    #     postcode: 3011
+    #  #   state: Victoria
+        country: Australia 
+        
+  - number: 6
+    corresponding: FALSE
+    info:
+      orgdiv: Faculty of Health
+      orgname: University of Canberra 
+    address:
+    #  #   street: "70/104 Ballarat Rd"
+        city: Bruce
+    #     postcode: 3011
+    #  #   state: Victoria
+        country: Australia        
+
+keywords:  
+  - anxiety
+  - AQoL
+  - depression
+  - psychological distress
+  - QALYs
+  - utility mapping
+  
+# pacs: 
+#   jel:
+#     - "C63"
+#     - "C88"
+#     - "I10"
+#   msc:
+#     - "91-08"
+
+# Sample for unstructured abstract 
+
+params:
+  endmatter: FALSE 
+  X: NULL
+
+abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"
+
+bibliography: RefCopy.bib
+
+header-includes: |
+  %% Per the spinger doc, new theorem styles can be included using built in style, 
+  %% but it seems the don't work so commented below
+  %\theoremstyle{thmstyleone}%
+  \newtheorem{theorem}{Theorem}%  meant for continuous numbers
+  %%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+  %% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+  \newtheorem{proposition}[theorem]{Proposition}%
+  %%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+  %% \theoremstyle{thmstyletwo}%
+  \theoremstyle{remark}
+  \newtheorem{example}{Example}%
+  \newtheorem{remark}{Remark}%
+
+  %% \theoremstyle{thmstylethree}%
+  \theoremstyle{definition}
+  \newtheorem{definition}{Definition}%
+  
+  \usepackage{float}
+  \let\origfigure\figure
+  \let\endorigfigure\endfigure
+  \renewenvironment{figure}[1][2] {
+      \expandafter\origfigure\expandafter[H]
+  } {
+      \endorigfigure
+  }
+  \usepackage{lscape}
+  \usepackage{pdflscape}
+  \newcommand{\blandscape}{\begin{landscape}}
+  \newcommand{\elandscape}{\end{landscape}}
+  \usepackage[none]{hyphenat}
+  \usepackage[export]{adjustbox}
+  \usepackage{multirow}
+  \usepackage{longtable}
+  \usepackage{array}
+  \usepackage{wrapfig}
+  \usepackage{colortbl}
+  \usepackage{booktabs} 
+  \usepackage{colortbl}
+  \usepackage{pdflscape}
+  \usepackage{tabu}
+  \usepackage{threeparttable}
+  \usepackage[normalem]{ulem}
+  \usepackage{threeparttablex}
+  \usepackage{makecell}
+
+# output: rticles::springer_article
 output: 
-  bookdown::pdf_document2: 
-    md_extensions: -auto_identifiers
-    template: CUP_TEMPLATE.tex
-    citation_package: biblatex
-    #base_format: rticles::springer_article
-    includes:
-      in_header: preamble.tex
+  bookdown::pdf_book: 
+    base_format: rticles::springer_article
+    # includes:
+    #   in_header: preamble.tex
+    keep_tex: true
     pandoc_args: 
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
-    toc: no
-    keep_tex: true
-#authorship: "`r paste0(paste0(readLines('../Header/Authors.txt')) %>% purrr::map_chr(~paste0(ifelse(.x=="","","/"),stringr::str_sub(.x,start = 2))),"")`"
-# authors:
-#   - name: Matthew P Hamilton*
-#     email: matthew.hamilton@orygen.org.au
-#     address: Orygen, Parkville, Australia
-#     correspondence: true
-#     equal_contributor: "yes"
-#   - name: Caroline X Gao
-#     address: Orygen, Parkville, Australia, Centre for Youth Mental Health, University of Melbourne, Parkville, Australia and School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
-#     equal_contributor: "yes"
-#   - name: Kate M Filia
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Jana M Menssink
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Sonia  Sharmin
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Nic Telford
-#     address: headspace National Youth Mental Health Foundation, Melbourne, Australia
-#   - name: Helen Herrman
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Ian B Hickie
-#     address: Brain and Mind Centre, Youth Mental Health & Technology, Faculty of Medicine & Health, The University of Sydney,  Australia
-#   - name: Cathrine  Mihalopoulos
-#     address: Deakin Health Economics, Institute for Health Transformation, Deakin University, Geelong,  Australia
-#   - name: Debra J Rickwood
-#     address: Faculty of Health, University of Canberra, Australia and headspace National Youth Mental Health Foundation, Melbourne, Australia
-#   - name: Patrick D McGorry
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-#   - name: Sue M Cotton
-#     address: Orygen, Parkville, Australia and Centre for Youth Mental Health, University of Melbourne, Parkville, Australia
-params:
-  endmatter: FALSE    
-  X: NULL
-abstract: |
-    \textit{Background: } Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet utility weights for deriving them are rarely directly measured in mental health services.
-    \textit{Objectives: } We aimed to identify the best mapping models and predictors for adolescent Assessment of Quality of Life - Six Dimensions (AQOL-6D) utility and assess the ability of mapping models to predict longitudinal change.
-    \textit{Methods: } We recruited 1107 young people attending Australian primary mental health services, collecting data at two time points, three months apart. Five linear and three generalised linear models were explored to identify the best mapping model. Ten-fold cross-validation using R$^2$, root mean square error (RMSE) and mean absolute error (MAE) were used to compare models and assess predictive ability of six candidate measures of psychological distress, depression and anxiety. Linear / generalised linear mixed effect models were used to construct longitudinal predictive models for AQoL-6D change.
-    \textit{Results: } A depression measure (Patient Health Questionnaire-9) was the strongest independent predictor of health utility. Linear regression models with complementary log-log transformation of utility score were the best performing models. Between-person associations were slightly larger than within-person associations for most of the predictors.
-    \textit{Conclusions: } Adolescent AQoL-6D utility can be derived from a range of psychological distress, depression and anxiety measures. Mapping models estimated from cross-sectional data can approximate longitudinal change but may slightly bias health utility predictions.
-    \textit{Data: } Replication code, detailed results and guidance on how to apply the models produced by this study are available in the online repository: https://doi.org/10.7910/DVN/DKDIB0.
-# "`r paste0(readLines('../Header/abstract.txt'), collapse=' ')`"
-# graphics: yes
-# subtitle: Do you have a subtitle? If so, write it here
-title: "`r params$X@title_1L_chr`" 
-#titlerunning: Mapping mental health measures to AQoL-6D utility
-#authorrunning: Hamilton, Gao, Filia et al.
-#journal: Epidemiology and Psychiatric Sciences
-#thanks: | 
-funding: |
-    The study was funded by the National Health and Medical Research Council (NHMRC, APP1076940), Orygen and headspace. 
-dataavailability: |
-    Dataverse
-conflicts: |
-    None
-keywords: anxiety, AQoL, depression, psychological distress, QALYs, utility mapping
-#PACS: 
-#- PAC1
-#- superPAC
-
-# MSC:
-# - MSC code 1
-# - MSC code 2
-bibliography: RefCopy.bib
-#biblio-style: spbasic
-#csl: cambridge-university-press-author-date-cambridge-a.csl
-# bibstyle options spbasic(default), spphys, spmpsci
-# header-includes:
-# - \usepackage{booktabs}
-# - \usepackage{longtable}
-# - \usepackage{array}
-# - \usepackage{multirow}
-# - \usepackage{wrapfig}
-#- \usepackage{float}
-# - \usepackage{colortbl}
-# - \usepackage{pdflscape}
-# - \usepackage{tabu}
-# - \usepackage{threeparttable}
-# - \usepackage[normalem]{ulem}
-# - \usepackage{threeparttablex}
-# - \usepackage{makecell}
-# - \usepackage{natbib}
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      out.extra = "")
+#library(flextable)# This forces knitr to label all figures.
+```
 
 ```{r echo = F, warning=FALSE}
 library(xtable)
@@ -190,3 +354,4 @@ print_indpnt_predrs_coefs_tbl <- function (params_ls, caption_1L_chr, mkdn_tbl_r
 
 ```{r child="../Child_RMDs/All_Content.Rmd", echo=FALSE, warning=FALSE}
 ```
+
