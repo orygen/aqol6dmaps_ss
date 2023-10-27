@@ -269,7 +269,7 @@ options(xtable.timestamp = "")
 ```
 
 ```{r echo=FALSE}
-print_cohort_table <- function (params_ls, caption_1L_chr, mkdn_tbl_ref_1L_chr) 
+print_cohort_table <- function (params_ls, caption_1L_chr, mkdn_tbl_ref_1L_chr)
 {
     results_ls <- params_ls$results_ls
     df <- results_ls$tables_ls$participant_descs
@@ -277,75 +277,95 @@ print_cohort_table <- function (params_ls, caption_1L_chr, mkdn_tbl_ref_1L_chr)
     df <- df %>% dplyr::mutate(variable = variable %>% purrr::map_chr(~Hmisc::capitalize(.x)))
     df <- dplyr::filter(df, !df[, 3] == "")
     if (params_ls$output_type_1L_chr == "PDF") {
-        df <- df %>% dplyr::mutate_all(~stringr::str_replace(.x, 
+        df <- df %>% dplyr::mutate_all(~stringr::str_replace(.x,
             "%", "\\\\%") %>% stringr::str_replace(",", "\\\\,"))
     }
     if (params_ls$output_type_1L_chr == "PDF") {
-        names(df) <- c("", "", "(N =", paste0(results_ls$cohort_ls$n_inc_1L_dbl, 
-            ")"), "(N =", paste0(results_ls$cohort_ls$n_fup_1L_dbl, 
+        names(df) <- c("", "", "(N =", paste0(results_ls$cohort_ls$n_inc_1L_dbl,
+            ")"), "(N =", paste0(results_ls$cohort_ls$n_fup_1L_dbl,
             ")"))
-        df %>% kableExtra::kbl(booktabs = T, caption = knitr::opts_current$get("tab.cap"), 
-            escape = F) %>% kableExtra::kable_styling() %>% kableExtra::column_spec(3:6, 
+        df %>% kableExtra::kbl(booktabs = T, caption = knitr::opts_current$get("tab.cap"),
+            escape = F) %>% kableExtra::kable_styling() %>% kableExtra::column_spec(3:6,
             width = "6em"#"3em"
-            ) %>% kableExtra::column_spec(1, bold = T, 
-            width = "14em") %>% kableExtra::add_header_above(c(" ", 
+            ) %>% kableExtra::column_spec(1, bold = T,
+            width = "10em") %>% kableExtra::add_header_above(c(" ",
             " ", Baseline = 2, `Follow-Up` = 2)) %>% kableExtra::collapse_rows(columns = 1)
     }
     else {
         df <- df %>% youthvars::transform_tb_for_merged_col_1(output_type_1L_chr = params_ls$output_type_1L_chr)
-        add_to_row_ls <- make_bl_fup_add_to_row_ls(df, n_at_bl_1L_int = results_ls$cohort_ls$n_inc_1L_dbl, 
+        add_to_row_ls <- make_bl_fup_add_to_row_ls(df, n_at_bl_1L_int = results_ls$cohort_ls$n_inc_1L_dbl,
             n_at_fup_1L_int = results_ls$cohort_ls$n_fup_1L_dbl)
-        df %>% ready4show::print_table(output_type_1L_chr = params_ls$output_type_1L_chr, 
-            caption_1L_chr = caption_1L_chr, mkdn_tbl_ref_1L_chr = paste0("tab:", 
-                knitr::opts_current$get("tab.id")), use_rdocx_1L_lgl = ifelse(params_ls$output_type_1L_chr == 
-                "Word", T, F), add_to_row_ls = add_to_row_ls, 
+        df %>% ready4show::print_table(output_type_1L_chr = params_ls$output_type_1L_chr,
+            caption_1L_chr = caption_1L_chr, mkdn_tbl_ref_1L_chr = paste0("tab:",
+                knitr::opts_current$get("tab.id")), use_rdocx_1L_lgl = ifelse(params_ls$output_type_1L_chr ==
+                "Word", T, F), add_to_row_ls = add_to_row_ls,
             sanitize_fn = force)
     }
 }
-print_indpnt_predrs_coefs_tbl <- function (params_ls, caption_1L_chr, mkdn_tbl_ref_1L_chr) 
+print_indpnt_predrs_coefs_tbl <- function (params_ls, caption_1L_chr, mkdn_tbl_ref_1L_chr)
 {
     results_ls <- params_ls$results_ls
     tb <- results_ls$tables_ls$ind_preds_coefs_tbl %>%
           dplyr::mutate(dplyr::across(starts_with("CI_"),~purrr::map_chr(.x,~ifelse(is.na(.x),.x,paste0("(",.x,")"))))) %>% # New
-      transform_nms_in_mdl_tbl(col_nm_1L_chr = "Parameter", 
+      transform_nms_in_mdl_tbl(col_nm_1L_chr = "Parameter",
         var_nm_change_lup = results_ls$var_nm_change_lup)
     if (params_ls$output_type_1L_chr == "Word") {
-        tb$Parameter <- stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(tb$Parameter, 
+        tb$Parameter <- stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(tb$Parameter,
             "\\\\textbf", ""), "\\{", ""), "\\}", "")
     }
     if (params_ls$output_type_1L_chr == "PDF") {
-        tb %>% dplyr::mutate(dplyr::across(.cols = everything(), 
-            ~dplyr::case_when(is.na(.x) ~ "", T ~ .x))) %>% kableExtra::kbl(booktabs = T, 
-            caption = knitr::opts_current$get("tab.cap"), escape = F, 
-            longtable = F,#T
-            col.names = c("Parameter", "Estimate", 
-                "SE", "CI (95\\%)", "R2", "Sigma", "Estimate", 
-                "SE", "CI (95\\%)", "R2", "Sigma")) %>% kableExtra::kable_styling(
-                  #latex_options = c(#"striped", # New
-                                                                                                    #"repeat_header",
-                                                                                                    #"hold_position" # NEW
-                                                                                                    #)
-                                                                                  ) %>% 
-            kableExtra::column_spec(c(4,9),#3:6, 
-                                    width = "6em"#"3em"
-                                    ) %>% kableExtra::row_spec(which(!is.na(tb[, 
-            5])), bold = T) %>% kableExtra::add_header_above(parse(text = paste0("c(", 
-            "\" \"", ", ", paste0("\"", results_ls$ttu_lngl_ls$best_mdls_tb[[1, 
-                "model_type"]], " - ", results_ls$ttu_lngl_ls$best_mdls_tb[[1, 
-                "link_and_tfmn_chr"]], "\" = 5"), ", ", paste0("\"", 
-                results_ls$ttu_lngl_ls$best_mdls_tb[[2, "model_type"]], 
-                " - ", results_ls$ttu_lngl_ls$best_mdls_tb[[2, 
-                  "link_and_tfmn_chr"]], "\" = 5"), ")")) %>% 
-            eval()) %>% kableExtra::collapse_rows(columns = 1) %>% 
-            kableExtra::footnote(general = make_scaling_text(results_ls), 
-                general_title = " ")
+        tb %>% 
+        dplyr::mutate(Parameter = Parameter %>% purrr::map_chr(~stringr::str_replace_all(.x," change"," \\\\(\\\\Delta \\\\)") %>%
+                                                                 stringr::str_replace_all(" baseline"," BL") %>%
+                                                                 stringr::str_replace_all(" model","") %>%
+                                                                 stringr::str_replace_all("Intercept","Intc."))) %>% 
+        dplyr::mutate(dplyr::across(.cols = everything(),
+                                    ~dplyr::case_when(is.na(.x) ~ "", T ~ .x))) %>% 
+        kableExtra::kbl(booktabs = T,
+                        caption = knitr::opts_current$get("tab.cap"), 
+                        escape = F,
+                        longtable = F,#T
+                        col.names = c("Parameter",#,#kableExtra::footnote_marker_number(1)
+                                      "Est.",#imate
+                                      "SE", "CI (95\\%)", "R2", "Sigma", "Est.",#imate
+                                      "SE", "CI (95\\%)", "R2", "Sigma")) %>% 
+          kableExtra::kable_styling(
+            #latex_options = c(#"striped", # New
+            #"repeat_header",
+            #"hold_position" # NEW
+            #)
+            ) %>%
+          #kableExtra::column_spec(1,width = "8em") %>%
+          kableExtra::column_spec(c(4,9),#3:6,
+                                  width = "6em"#"3em"
+                                  ) %>% 
+        kableExtra::row_spec(which(!is.na(tb[,5])), bold = T) %>% 
+        kableExtra::add_header_above(parse(text = paste0("c(",
+                                                         "\"\\\\\\\\textbf\\\\{Model\\\\}\" = 1", ", ", 
+                                                         paste0("\"", results_ls$ttu_lngl_ls$best_mdls_tb[[1, "model_type"]],
+                                                                " - ", results_ls$ttu_lngl_ls$best_mdls_tb[[1, "link_and_tfmn_chr"]], "\" = 5"), ", ", 
+                                                         paste0("\"", results_ls$ttu_lngl_ls$best_mdls_tb[[2, "model_type"]],
+                                                                " - ", results_ls$ttu_lngl_ls$best_mdls_tb[[2,"link_and_tfmn_chr"]], "\" = 5"), ")")) %>% eval(),
+                                     escape = FALSE) %>% kableExtra::collapse_rows(columns = 1) %>%
+        kableExtra::footnote(general= paste0("Est. - Estimate, ", "SE - Standard Error, ", "CI - Credible Interval, ", 
+                                             "Intc. - Intercept, ", "BL - Baseline and ", "$\\\\Delta$ - Change."),
+                             number=c(make_scaling_text(results_ls) %>% stringr::str_sub(start = 6)),
+                             #threeparttable = T,
+                             footnote_as_chunk=TRUE, general_title = " ", escape=FALSE)
+        # kableExtra::add_footnote(c("Est. - Estimate", "SE - Standard Error", "CI - Credible Interval", "Intc. - Intercept", "BL - Baseline", "$\\\\Delta$ - Change from baseline"),
+        #   # c(make_scaling_text(results_ls),
+        #   #                          "Est. - Estimate, SE - Standard Error, CI - Credible Interval, Intc. - Intercept, BL - Baseline, $\\\\Delta$ - Change from baseline."),
+        #                          notation = "none",
+        #                          escape=FALSE)
+            # kableExtra::footnote(general = paste0(make_scaling_text(results_ls),"Est. - Estimate, SE - Standard Error, CI - Credible Interval, Intc. - Intercept, BL - Baseline, \\\\(\\\\Delta \\\\) - Change."),
+            #     general_title = " Note.", footnote_as_chunk = TRUE)
     }
     else {
         add_to_row_ls <- NULL
-        tb %>% ready4show::print_table(output_type_1L_chr = params_ls$output_type_1L_chr, 
-            caption_1L_chr = caption_1L_chr, mkdn_tbl_ref_1L_chr = mkdn_tbl_ref_1L_chr, 
-            use_rdocx_1L_lgl = ifelse(params_ls$output_type_1L_chr == 
-                "Word", T, F), add_to_row_ls = add_to_row_ls, 
+        tb %>% ready4show::print_table(output_type_1L_chr = params_ls$output_type_1L_chr,
+            caption_1L_chr = caption_1L_chr, mkdn_tbl_ref_1L_chr = mkdn_tbl_ref_1L_chr,
+            use_rdocx_1L_lgl = ifelse(params_ls$output_type_1L_chr ==
+                "Word", T, F), add_to_row_ls = add_to_row_ls,
             footnotes_chr = make_scaling_text(results_ls), sanitize_fn = force)
     }
 }

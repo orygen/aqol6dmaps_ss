@@ -6,6 +6,5 @@ output: html_document
 ---
 
 ```{r fig1, fig.cap=paste0("Distribution of ",results_ls$study_descs_ls$health_utl_nm_1L_chr," domains"),echo=F, out.width = "400px"}
-knitr::include_graphics("combined_utl.png"#results_ls$paths_to_figs_ls$combined_utl
-                        )
+knitr::include_graphics(results_ls$paths_to_figs_ls$combined_utl)
 ```
