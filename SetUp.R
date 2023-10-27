@@ -1,4 +1,5 @@
 library(ready4)
+library(ready4show)
 #path_1L_chr <- "SPECIFY PATH ENDING IN '/' "
 A <- readRDS(paste0(path_1L_chr,"A.RDS")) # Read in results
 A@d_TTUReports@a_TTUSynopsis@a_Ready4showPaths@outp_data_dir_1L_chr <- paste0(path_1L_chr,"Real") # Update relative path to raw output
@@ -15,7 +16,16 @@ A@d_TTUReports@a_TTUSynopsis@title_1L_chr <- "Mapping psychological distress, de
 #dir.create(paste0(A@d_TTUReports@a_TTUSynopsis@a_Ready4showPaths@outp_data_dir_1L_chr,"/Markdown/Manuscript_Submission"))
 file.copy(list.files(getwd()),paste0(A@d_TTUReports@a_TTUSynopsis@a_Ready4showPaths@outp_data_dir_1L_chr,"/Markdown/Manuscript_Submission"), recursive = T, overwrite = T)
 authorSlot(A, "d_TTUReports", what_1L_chr = "Manuscript_Submission", download_tmpl_1L_lgl = F)
-
+authorReport(renewSlot(A,"d_TTUReports@a_TTUSynopsis@rmd_fl_nms_ls",
+                       ready4show::make_rmd_fl_nms_ls(pdf_fl_nm_1L_chr = "TA_PDF")) %>% 
+               procureSlot("d_TTUReports@a_TTUSynopsis"),
+             fl_nm_1L_chr = "Supplement", what_1L_chr = "Manuscript_Submission")
+authorReport(renewSlot(A,"d_TTUReports@a_TTUSynopsis@rmd_fl_nms_ls",
+                       ready4show::make_rmd_fl_nms_ls()) %>% 
+               renewSlot("d_TTUReports@a_TTUSynopsis@outp_formats_chr",
+                         c("Word","Word")) %>%
+               procureSlot("d_TTUReports@a_TTUSynopsis"),
+             what_1L_chr = "Manuscript_Submission")
 
 
 

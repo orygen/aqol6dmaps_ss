@@ -31,6 +31,7 @@ header-includes:
 
 ```{r echo = F, warning=FALSE}
 library(xtable)
+library(ready4show)
 #options(xtable.floating = FALSE)
 options(xtable.timestamp = "")
 ```

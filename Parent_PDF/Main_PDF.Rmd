@@ -335,7 +335,6 @@ print_indpnt_predrs_coefs_tbl <- function (params_ls, caption_1L_chr, mkdn_tbl_r
             #"hold_position" # NEW
             #)
             ) %>%
-          #kableExtra::column_spec(1,width = "8em") %>%
           kableExtra::column_spec(c(4,9),#3:6,
                                   width = "6em"#"3em"
                                   ) %>% 
@@ -350,15 +349,7 @@ print_indpnt_predrs_coefs_tbl <- function (params_ls, caption_1L_chr, mkdn_tbl_r
         kableExtra::footnote(general= paste0("Est. - Estimate, ", "SE - Standard Error, ", "CI - Credible Interval, ", 
                                              "Intc. - Intercept, ", "BL - Baseline and ", "$\\\\Delta$ - Change."),
                              number=c(make_scaling_text(results_ls) %>% stringr::str_sub(start = 6)),
-                             #threeparttable = T,
                              footnote_as_chunk=TRUE, general_title = " ", escape=FALSE)
-        # kableExtra::add_footnote(c("Est. - Estimate", "SE - Standard Error", "CI - Credible Interval", "Intc. - Intercept", "BL - Baseline", "$\\\\Delta$ - Change from baseline"),
-        #   # c(make_scaling_text(results_ls),
-        #   #                          "Est. - Estimate, SE - Standard Error, CI - Credible Interval, Intc. - Intercept, BL - Baseline, $\\\\Delta$ - Change from baseline."),
-        #                          notation = "none",
-        #                          escape=FALSE)
-            # kableExtra::footnote(general = paste0(make_scaling_text(results_ls),"Est. - Estimate, SE - Standard Error, CI - Credible Interval, Intc. - Intercept, BL - Baseline, \\\\(\\\\Delta \\\\) - Change."),
-            #     general_title = " Note.", footnote_as_chunk = TRUE)
     }
     else {
         add_to_row_ls <- NULL

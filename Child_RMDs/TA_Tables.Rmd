@@ -26,7 +26,7 @@ print_ten_folds_tbl(params_ls,
 purrr::map(1:length(results_ls$ttu_lngl_ls$best_mdls_tb$model_type),
            ~ list(coefscovarstype = paste0("coefscovarstype",.x),
                          ref_1L_int = .x)) %>%
-knit_from_tmpl(path_to_tmpl_1L_chr = "../Child_RMDs/TA_Tables_Covars_Coefs.Rmd")
+ready4show::knit_from_tmpl(path_to_tmpl_1L_chr = "../Child_RMDs/TA_Tables_Covars_Coefs.Rmd")
 ```
 
 <!-- \elandscape -->

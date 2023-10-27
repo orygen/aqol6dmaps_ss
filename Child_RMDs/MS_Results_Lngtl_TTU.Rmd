@@ -8,7 +8,7 @@ output: html_document
 ## Longitudinal models
 
 Regression coefficients of the baseline score and score changes (from baseline to follow-up) estimated in individual `r get_lngl_ttu_types(results_ls)` models are summarised in 
-`r ifelse(params_ls$output_type_1L_chr=="Word","","Table")` `r make_indpnt_predrs_lngl_tbls_ref(params_ls)`).<!-- Table end \@ref(tab:cfscl--> `r  make_lngl_ttu_r2_text(results_ls, part_int = 1:2) %>% stringr::str_replace("0.68 ","0.680 ")`. Variance of the random intercept was comparable with the residual variance. 
+`r ifelse(params_ls$output_type_1L_chr=="Word","","Table")` `r make_indpnt_predrs_lngl_tbls_ref(params_ls)`).<!-- Table end \@ref(tab:cfscl--> `r  make_lngl_ttu_r2_text(results_ls, part_int = 1:2) %>% stringr::str_replace("0.68 ","0.680 ")` Variance of the random intercept was comparable with the residual variance. 
 <!-- "MS_Results_Ratios.Rmd" -->
 
 Distribution of observed and predicted utility scores and their association from GLMM (Gaussian distribution with log link) and LMM (c-loglog transformed)  using `r get_prefd_mdl_predrs(results_ls)` are plotted in Figure \@ref(fig:fig2). Compared with GLMM, the predicted utility scores from LMM converge better to the observed distribution and provide better estimations at the tail of the distribution. When the observed utility scores were low, the predicted utility were too high in the GLMM model, see Figure 2 (B). The observed and predicted distributions of utility scores for other anxiety and depression measurements were similar for LMM. However, GLM had low coverage in utility scores below 0.3 and also made predictions out of range (over 1).
