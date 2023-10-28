@@ -31,9 +31,9 @@ ready4show::knit_from_tmpl(path_to_tmpl_1L_chr = "../Child_RMDs/TA_Tables_Covars
 
 <!-- \elandscape -->
 <!-- <!---BLOCK_LANDSCAPE_STOP--->
-\newpage
+<!-- \newpage -->
 
-```{r cpkgs, tab.cap='R Packages used in data analysis and reporting', tab.id = 'cpkgs', echo = F, results = 'asis'}
+```{r cpkgs, eval = F, tab.cap='R Packages used in data analysis and reporting', tab.id = 'cpkgs', echo = F, results = 'asis'}
 df <- readRDS("../packages.RDS")
 if(params_ls$output_type_1L_chr == "Word") {
   df %>%

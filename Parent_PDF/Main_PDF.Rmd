@@ -26,37 +26,37 @@ authors:
     particle: P 
     lastname: Hamilton
     email: matthew.hamilton1@monash.edu
-    affiliation: [2,1]
+    affiliation: [1,2]
     corresponding: TRUE
+    equalcont: These authors contributed equally to this work.
   # - prefix: Mr.
     #suffix: III
     #naturename: Poet Laureate
     # degrees: MSc #, PhD
-    equalcont: These authors contributed equally to this work.
     
   - firstname: Caroline
     lastname: Gao
     #     email: caroline.gao@orygen.org.au
-    affiliation: [2,3,1]
+    affiliation: [1,3,2]
     equalcont: These authors contributed equally to this work.
 
   - firstname: Kate  
     particle: M
     lastname: Filia
     #     email: kate.filia@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [1,3]
 
   - firstname: Jana
     particle: M
     lastname: Menssink
     #     email: jana.menssink@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [1,3]
 
   - firstname: Sonia
     #particle: M
     lastname: Sharmin
     #     email: jana.menssink@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [1,3]
 
   - firstname: Nic
     #particle: M
@@ -68,7 +68,7 @@ authors:
     #particle: M
     lastname: Herrman
     #     email: jana.menssink@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [1,3]
 
   - firstname: Ian
     particle: B
@@ -79,7 +79,7 @@ authors:
   - firstname: Cathrine
     lastname: Mihalopoulos
     #     email: cathy.mihalopoulos@deakin.edu.au
-    affiliation: [1]  
+    affiliation: [2]  
 
   - firstname: Debra
     particle: J
@@ -91,16 +91,26 @@ authors:
     particle: D 
     lastname: McGorry
     #     email: pat.mcgorry@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [1,3]
 
   - firstname: Sue
     particle: M
     lastname: Cotton
     #     email: sue.cotton@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [1,3]
     
 affiliations:
   - number: 1
+    corresponding: FALSE
+    info:
+      orgname: Orygen
+    address:
+     #   street: "35 Poplar Road"
+        city: Parkville
+        # postcode: 3052
+        #state: Victoria
+        country: Australia
+  - number: 2
     corresponding: TRUE
     info:
       orgdiv: School of Public Health and Preventive Medicine
@@ -109,16 +119,6 @@ affiliations:
         #street: "553 St Kilda Road"
         city: Melbourne
         #postcode: 3004
-        #state: Victoria
-        country: Australia
-  - number: 2
-    corresponding: FALSE
-    info:
-      orgname: Orygen
-    address:
-     #   street: "35 Poplar Road"
-        city: Parkville
-        # postcode: 3052
         #state: Victoria
         country: Australia
   - number: 3
@@ -176,13 +176,13 @@ keywords:
   - QALYs
   - utility mapping
   
-# pacs: 
-#   jel:
-#     - "C63"
-#     - "C88"
-#     - "I10"
-#   msc:
-#     - "91-08"
+pacs:
+  jel:
+    - "C52"
+    - "I19"
+  msc:
+    - "91B16"
+    - "91B82"
 
 # Sample for unstructured abstract 
 
@@ -192,7 +192,7 @@ params:
 
 abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"
 
-bibliography: RefCopy.bib
+bibliography: ../Data/RefCopy.bib
 
 header-includes: |
   %% Per the spinger doc, new theorem styles can be included using built in style, 

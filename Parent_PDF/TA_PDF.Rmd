@@ -51,7 +51,7 @@ options(xtable.timestamp = "")
 \counterwithin{table}{section}
 
 \newpage
-# Supplement to submitted manuscript
+# Additional tables
 
 ```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE, warning=FALSE}
 ```

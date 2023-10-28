@@ -8,5 +8,7 @@ output: html_document
 ```{r, child = '../Child_RMDs/MS_Figures_1.RMD', echo=FALSE}
 ```
 
+\newpage
+
 ```{r, child = '../Child_RMDs/MS_Figures_2.RMD', echo=FALSE}
 ```

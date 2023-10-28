@@ -81,6 +81,6 @@ print_lngl_ttu_tbls <- function(table_df, # Rename and generalise from TTU
 }
 ```
 
-## Additional tables
+<!-- ## Additional tables -->
 ```{r child="../Child_RMDs/TA_Tables.Rmd", echo=FALSE}
 ```
