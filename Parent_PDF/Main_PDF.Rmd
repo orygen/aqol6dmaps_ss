@@ -11,7 +11,7 @@
 
 classoptions: 
   - sn-vancouver      
-  - Numbered      # Optional: Use numbered references instead of namedate references (only for sn-nature, sn-basic, sn-vancouver, sn-chicago, sn-mathphys or sn-nature)
+#  - Numbered      # Optional: Use numbered references instead of namedate references (only for sn-nature, sn-basic, sn-vancouver, sn-chicago, sn-mathphys or sn-nature)
   # - referee       # Optional: Use double line spacing 
   # - lineno        # Optional: Add line numbers
   # - iicol         # Optional: Double column layour
@@ -19,154 +19,153 @@ classoptions:
 title: "`r params$X@title_1L_chr`" 
 titlerunning: Mapping psychological measures to health utility
 
-# authors:
+# authors: 
+#   - firstname: Matthew
+#     particle: P 
+#     lastname: Hamilton
+#     email: matthew.hamilton1@monash.edu
+#     affiliation: [1,2]
+#     corresponding: TRUE
+#     equalcont: These authors contributed equally to this work.
+#   # - prefix: Mr.
+#     #suffix: III
+#     #naturename: Poet Laureate
+#     # degrees: MSc #, PhD
+#     
+#   - firstname: Caroline
+#     lastname: Gao
+#     #     email: caroline.gao@orygen.org.au
+#     affiliation: [1,3,2]
+#     equalcont: These authors contributed equally to this work.
+# 
+#   - firstname: Kate  
+#     particle: M
+#     lastname: Filia
+#     #     email: kate.filia@orygen.org.au
+#     affiliation: [1,3]
+# 
+#   - firstname: Jana
+#     particle: M
+#     lastname: Menssink
+#     #     email: jana.menssink@orygen.org.au
+#     affiliation: [1,3]
+# 
+#   - firstname: Sonia
+#     #particle: M
+#     lastname: Sharmin
+#     #     email: jana.menssink@orygen.org.au
+#     affiliation: [1,3]
+# 
+#   - firstname: Nic
+#     #particle: M
+#     lastname: Telford
+#     #     email: jana.menssink@orygen.org.au
+#     affiliation: [4]
+# 
+#   - firstname: Helen
+#     #particle: M
+#     lastname: Herrman
+#     #     email: jana.menssink@orygen.org.au
+#     affiliation: [1,3]
+# 
+#   - firstname: Ian
+#     particle: B
+#     lastname: Hickie
+#     #     email: jana.menssink@orygen.org.au
+#     affiliation: [5]
+# 
+#   - firstname: Cathrine
+#     lastname: Mihalopoulos
+#     #     email: cathy.mihalopoulos@deakin.edu.au
+#     affiliation: [2]  
+# 
+#   - firstname: Debra
+#     particle: J
+#     lastname: Rickwood
+#     #     email: jana.menssink@orygen.org.au
+#     affiliation: [4,6]
+#     
+#   - firstname: Patrick 
+#     particle: D 
+#     lastname: McGorry
+#     #     email: pat.mcgorry@orygen.org.au
+#     affiliation: [1,3]
+# 
+#   - firstname: Sue
+#     particle: M
+#     lastname: Cotton
+#     #     email: sue.cotton@orygen.org.au
+#     affiliation: [1,3]
+#     
+# affiliations:
+#   - number: 1
+#     corresponding: FALSE
+#     info:
+#       orgname: Orygen
+#     address:
+#      #   street: "35 Poplar Road"
+#         city: Parkville
+#         # postcode: 3052
+#         #state: Victoria
+#         country: Australia
+#   - number: 2
+#     corresponding: TRUE
+#     info:
+#       orgdiv: School of Public Health and Preventive Medicine
+#       orgname: Monash University
+#     address:
+#         #street: "553 St Kilda Road"
+#         city: Melbourne
+#         #postcode: 3004
+#         #state: Victoria
+#         country: Australia
+#   - number: 3
+#     corresponding: FALSE
+#     info:
+#       orgdiv: Centre for Youth Mental Health
+#       orgname: The University of Melbourne
+#     address:
+#      #   street: "35 Poplar Road"
+#         city: Parkville
+#         # postcode: 3052
+#     #   state: Victoria
+#         country: Australia
+#   - number: 4
+#     corresponding: FALSE
+#     info:
+# #      orgdiv: XXXXXXXXXXX
+#       orgname: headspace National Youth Mental Health Foundation   
+#     address:
+#     #  #   street: "485 La Trobe St"
+#         city: Melbourne
+#     #     postcode: 3000
+#     #  #   state: Victoria
+#         country: Australia     
+#         #   - name: Ian B Hickie
+#   - number: 5
+#     corresponding: FALSE
+#     info:
+#       orgdiv: Brain and Mind Centre, Youth Mental Health & Technology
+#       orgname: University of Sydney 
+#     address:
+#     #  #   street: "70/104 Ballarat Rd"
+#         city: Camperdown
+#     #     postcode: 3011
+#     #  #   state: Victoria
+#         country: Australia 
+#         
+#   - number: 6
+#     corresponding: FALSE
+#     info:
+#       orgdiv: Faculty of Health
+#       orgname: University of Canberra 
+#     address:
+#     #  #   street: "70/104 Ballarat Rd"
+#         city: Bruce
+#     #     postcode: 3011
+#     #  #   state: Victoria
+#         country: Australia        
 
-authors: 
-  - firstname: Matthew
-    particle: P 
-    lastname: Hamilton
-    email: matthew.hamilton1@monash.edu
-    affiliation: [1,2]
-    corresponding: TRUE
-    equalcont: These authors contributed equally to this work.
-  # - prefix: Mr.
-    #suffix: III
-    #naturename: Poet Laureate
-    # degrees: MSc #, PhD
-    
-  - firstname: Caroline
-    lastname: Gao
-    #     email: caroline.gao@orygen.org.au
-    affiliation: [1,3,2]
-    equalcont: These authors contributed equally to this work.
-
-  - firstname: Kate  
-    particle: M
-    lastname: Filia
-    #     email: kate.filia@orygen.org.au
-    affiliation: [1,3]
-
-  - firstname: Jana
-    particle: M
-    lastname: Menssink
-    #     email: jana.menssink@orygen.org.au
-    affiliation: [1,3]
-
-  - firstname: Sonia
-    #particle: M
-    lastname: Sharmin
-    #     email: jana.menssink@orygen.org.au
-    affiliation: [1,3]
-
-  - firstname: Nic
-    #particle: M
-    lastname: Telford
-    #     email: jana.menssink@orygen.org.au
-    affiliation: [4]
-
-  - firstname: Helen
-    #particle: M
-    lastname: Herrman
-    #     email: jana.menssink@orygen.org.au
-    affiliation: [1,3]
-
-  - firstname: Ian
-    particle: B
-    lastname: Hickie
-    #     email: jana.menssink@orygen.org.au
-    affiliation: [5]
-
-  - firstname: Cathrine
-    lastname: Mihalopoulos
-    #     email: cathy.mihalopoulos@deakin.edu.au
-    affiliation: [2]  
-
-  - firstname: Debra
-    particle: J
-    lastname: Rickwood
-    #     email: jana.menssink@orygen.org.au
-    affiliation: [4,6]
-    
-  - firstname: Patrick 
-    particle: D 
-    lastname: McGorry
-    #     email: pat.mcgorry@orygen.org.au
-    affiliation: [1,3]
-
-  - firstname: Sue
-    particle: M
-    lastname: Cotton
-    #     email: sue.cotton@orygen.org.au
-    affiliation: [1,3]
-    
-affiliations:
-  - number: 1
-    corresponding: FALSE
-    info:
-      orgname: Orygen
-    address:
-     #   street: "35 Poplar Road"
-        city: Parkville
-        # postcode: 3052
-        #state: Victoria
-        country: Australia
-  - number: 2
-    corresponding: TRUE
-    info:
-      orgdiv: School of Public Health and Preventive Medicine
-      orgname: Monash University
-    address:
-        #street: "553 St Kilda Road"
-        city: Melbourne
-        #postcode: 3004
-        #state: Victoria
-        country: Australia
-  - number: 3
-    corresponding: FALSE
-    info:
-      orgdiv: Centre for Youth Mental Health
-      orgname: The University of Melbourne
-    address:
-     #   street: "35 Poplar Road"
-        city: Parkville
-        # postcode: 3052
-    #   state: Victoria
-        country: Australia
-  - number: 4
-    corresponding: FALSE
-    info:
-#      orgdiv: XXXXXXXXXXX
-      orgname: headspace National Youth Mental Health Foundation   
-    address:
-    #  #   street: "485 La Trobe St"
-        city: Melbourne
-    #     postcode: 3000
-    #  #   state: Victoria
-        country: Australia     
-        #   - name: Ian B Hickie
-  - number: 5
-    corresponding: FALSE
-    info:
-      orgdiv: Brain and Mind Centre, Youth Mental Health & Technology
-      orgname: University of Sydney 
-    address:
-    #  #   street: "70/104 Ballarat Rd"
-        city: Camperdown
-    #     postcode: 3011
-    #  #   state: Victoria
-        country: Australia 
-        
-  - number: 6
-    corresponding: FALSE
-    info:
-      orgdiv: Faculty of Health
-      orgname: University of Canberra 
-    address:
-    #  #   street: "70/104 Ballarat Rd"
-        city: Bruce
-    #     postcode: 3011
-    #  #   state: Victoria
-        country: Australia        
 
 keywords:  
   - anxiety
