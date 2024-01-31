@@ -1,0 +1,87 @@
+PMID- 21839416
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20111007
+LR  - 20151119
+IS  - 1524-4733 (Electronic)
+IS  - 1098-3015 (Linking)
+VI  - 14
+IP  - 5
+DP  - 2011 Jul-Aug
+TI  - Analysis of SF-6D index data: is beta regression appropriate?
+PG  - 759-67
+LID - 10.1016/j.jval.2010.12.009 [doi]
+AB  - BACKGROUND: Preference-weighted index scores of health-related quality of life are 
+      commonly skewed to the left and bounded at one. Beta regression is used in various 
+      disciplines to address the specific features of bounded outcome variables such as 
+      heteroscedasticity, but has rarely been used in the context of health-related 
+      quality of life measures. We aimed to examine if beta regression is appropriate for 
+      analyzing the relationship between subject characteristics and SF-6D index scores. 
+      METHODS: We used data from the population-based German KORA F4 study. Besides 
+      classical beta regression, we also fitted extended beta regression models by 
+      allowing a regression structure on the precision parameter. Regression coefficients 
+      and predictive accuracy of the models were compared to those from a linear 
+      regression model with model-based and robust standard errors. RESULTS: The beta 
+      distribution fitted the empirical distribution of the SF-6D index better than the 
+      normal distribution. Extended beta regression performed best in terms of predictive 
+      accuracy but confidence intervals of the fit measures suggested that no model was 
+      superior to the others. Age had a significant negative effect on the precision 
+      parameter indicating higher variation of health utilities in older age groups. The 
+      observations reporting perfect health had a high influence on model results. 
+      CONCLUSIONS: Beta regression, especially with precision covariates is a possible 
+      supplement to the methods currently used in the analysis of health utility data. In 
+      particular, it accounted for the boundedness and heteroscedasticity of the SF-6D 
+      index. A pitfall of the beta regression is that it does not work well in handling 
+      one-valued observations.
+CI  - Copyright © 2011 International Society for Pharmacoeconomics and Outcomes Research 
+      (ISPOR). Published by Elsevier Inc. All rights reserved.
+FAU - Hunger, Matthias
+AU  - Hunger M
+AD  - Helmholtz Zentrum München, German Research Center for Environmental Health, 
+      Institute of Health Economics and Health Care Management, Neuherberg, Germany. 
+      matthias.hunger@helmholtz-muenchen.de
+FAU - Baumert, Jens
+AU  - Baumert J
+FAU - Holle, Rolf
+AU  - Holle R
+LA  - eng
+PT  - Comparative Study
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20110531
+PL  - United States
+TA  - Value Health
+JT  - Value in health : the journal of the International Society for Pharmacoeconomics and 
+      Outcomes Research
+JID - 100883818
+SB  - IM
+MH  - Adult
+MH  - Age Factors
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Female
+MH  - Germany
+MH  - *Health Status
+MH  - *Health Status Indicators
+MH  - Health Surveys
+MH  - Humans
+MH  - Linear Models
+MH  - Male
+MH  - Middle Aged
+MH  - *Quality of Life
+MH  - *Regression Analysis
+MH  - *Surveys and Questionnaires
+EDAT- 2011/08/16 06:00
+MHDA- 2011/10/08 06:00
+CRDT- 2011/08/16 06:00
+PHST- 2010/06/25 00:00 [received]
+PHST- 2010/12/22 00:00 [revised]
+PHST- 2010/12/22 00:00 [accepted]
+PHST- 2011/08/16 06:00 [entrez]
+PHST- 2011/08/16 06:00 [pubmed]
+PHST- 2011/10/08 06:00 [medline]
+AID - S1098-3015(11)00115-X [pii]
+AID - 10.1016/j.jval.2010.12.009 [doi]
+PST - ppublish
+SO  - Value Health. 2011 Jul-Aug;14(5):759-67. doi: 10.1016/j.jval.2010.12.009. Epub 2011 
+      May 31.
