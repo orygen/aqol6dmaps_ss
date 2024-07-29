@@ -1,7 +1,7 @@
 \\textbf{Background: }
 \\newline
 \\newline
-Health utility data are rarely routinely collected in mental helath services. Mapping models that predict health utility from other outcome measures are typically derived from cross-sectional data but often used to predict longitudinal change.
+Health utility data are rarely routinely collected in mental health services. Mapping models that predict health utility from other outcome measures are typically derived from cross-sectional data but often used to predict longitudinal change.
 \\textbf{Objective: }
 We aimed to develop models to map six psychological measures to adolescent Assessment of Quality of Life - Six Dimensions (AQOL-6D) health utility for youth mental health service clients and assess the ability of mapping models to predict longitudinal change.
 \\newline

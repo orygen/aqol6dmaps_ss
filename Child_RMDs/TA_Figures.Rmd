@@ -4,6 +4,27 @@ author: "Matthew Hamilton"
 date: "13/10/2020"
 output: html_document
 ---
-```{r importance, fig.cap="Variable importance estimated using random forest",echo=F, out.width = "400px"}
-knitr::include_graphics(results_ls$paths_to_figs_ls$importance)
+```{r importance, eval=FALSE, fig.cap="Variable importance estimated using random forest",echo=F, out.width = "400px"}
+#knitr::include_graphics(results_ls$paths_to_figs_ls$importance)
+```
+```{r fig.cap=names(results_ls$paths_to_figs_ls$diagnostics_chr)[1],echo=F, out.width = "400px"}
+knitr::include_graphics(unname(results_ls$paths_to_figs_ls$diagnostics_chr[1]))
+```
+```{r fig.cap=names(results_ls$paths_to_figs_ls$diagnostics_chr)[2],echo=F, out.width = "400px"}
+knitr::include_graphics(unname(results_ls$paths_to_figs_ls$diagnostics_chr[2]))
+```
+```{r fig.cap=names(results_ls$paths_to_figs_ls$diagnostics_chr)[3],echo=F, out.width = "400px"}
+knitr::include_graphics(unname(results_ls$paths_to_figs_ls$diagnostics_chr[3]))
+```
+```{r fig.cap=names(results_ls$paths_to_figs_ls$diagnostics_chr)[4],echo=F, out.width = "400px"}
+knitr::include_graphics(unname(results_ls$paths_to_figs_ls$diagnostics_chr[4]))
+```
+```{r fig.cap=names(results_ls$paths_to_figs_ls$diagnostics_chr)[5],echo=F, out.width = "400px"}
+knitr::include_graphics(unname(results_ls$paths_to_figs_ls$diagnostics_chr[5]))
+```
+```{r fig.cap=names(results_ls$paths_to_figs_ls$diagnostics_chr)[6],echo=F, out.width = "400px"}
+knitr::include_graphics(unname(results_ls$paths_to_figs_ls$diagnostics_chr[6]))
+```
+```{r fig.cap="AQoL-6D transformation distributions",echo=F, out.width = "400px"}
+knitr::include_graphics(results_ls$paths_to_figs_ls$density)
 ```

@@ -3,4 +3,4 @@ title: "MS_Aims"
 output: html_document
 ---
 
-We are developing a computational model of the systems shaping the mental health of young people [@hamilton2023prototype]. To enable that model to be used in cost-utility analyses of primary youth mental health services, we aimed to use data from a sample of help-seeking young people to: (i) identify the best mapping regression models to predict adolescent weighted AQoL-6D utility from six candidate measures of psychological distress, depression and anxiety; and (ii) assess ability of the mapping algorithms to predict longitudinal (three-month) change.
+We are developing a computational model of the systems shaping the mental health of young people [@hamilton2024prototype]. To enable that model to be used in CUAs of primary youth mental health services, we aimed to use data from a sample of help-seeking young people to: (i) identify the best mapping regression models to predict adolescent weighted AQoL-6D utility from six candidate measures of psychological distress, depression and anxiety; and (ii) assess ability of the mapping algorithms to predict longitudinal (three-month) change.

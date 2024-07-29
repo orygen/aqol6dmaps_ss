@@ -55,3 +55,9 @@ options(xtable.timestamp = "")
 
 ```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE, warning=FALSE}
 ```
+
+\newpage
+# Additional figures
+
+```{r child="../Child_RMDs/TA_Figures.Rmd", echo=FALSE, warning=FALSE}
+```
