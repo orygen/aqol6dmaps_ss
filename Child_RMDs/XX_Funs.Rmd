@@ -4,7 +4,7 @@ author: "Matthew Hamilton"
 date: "13/10/2020"
 output: html_document
 ---
-```{r echo = F}
+```{r echo = F, warning=FALSE}
 library(officedown)
 library(specific)
 ```

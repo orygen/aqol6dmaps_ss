@@ -17,3 +17,6 @@ output: html_document
 ```
 ```{r child="MS_Results_Lngtl_TTU.Rmd", echo=FALSE}
 ```
+
+## Quality assessment
+We assess this study as meeting 20 of the 21 items in the MAPS Statement checklist - we did not meet item number 6 as we did not use an external validation sample. As outlined in Table A.5 (Online Supplement), we assess that of the 27 quality assessment criteria developed by Su and colleagues [@su2025mapping], the only one we failed to meet was number 2 as our abstract explicitly names only one (PHQ-9) of our six source measures. 

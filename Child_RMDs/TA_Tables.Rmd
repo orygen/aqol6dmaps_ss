@@ -10,6 +10,7 @@ print_ten_folds_tbl(params_ls,
                     caption_1L_chr = knitr::opts_current$get("tab.cap"),
                     mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")))
 ```
+
 \newpage
 
 ```{r tenfoldglmtb, tab.cap=make_ten_folds_tbl_title(results_ls, ref_1L_int=2), tab.id = 'tenfoldglmtb', echo = F, results = 'asis'}
@@ -18,6 +19,7 @@ print_ten_folds_tbl(params_ls,
                     mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")),
                     ref_1L_int = 2)
 ```
+
 \newpage
 <!-- \blandscape -->
 <!-- <!---BLOCK_LANDSCAPE_START---> 

@@ -29,7 +29,7 @@ A@d_TTUReports@a_TTUSynopsis@title_1L_chr <- "Mapping psychological distress, de
 #A@d_TTUReports@a_TTUSynopsis@tables_in_body_lgl <-  A@d_TTUReports@a_TTUSynopsis@figures_in_body_lgl <- T
 #dir.create(paste0(A@d_TTUReports@a_TTUSynopsis@a_Ready4showPaths@outp_data_dir_1L_chr,"/Markdown/Manuscript_Submission"))
 file.copy(list.files(getwd()),paste0(A@d_TTUReports@a_TTUSynopsis@a_Ready4showPaths@outp_data_dir_1L_chr,"/Markdown/Manuscript_Submission"), recursive = T, overwrite = T)
-plt<- specific::make_cmpst_sctr_and_dnst_plt(outp_smry_ls = A@d_TTUReports@a_TTUSynopsis@b_SpecificResults@a_SpecificShareable@shareable_outp_ls,
+plt <- specific::make_cmpst_sctr_and_dnst_plt(outp_smry_ls = A@d_TTUReports@a_TTUSynopsis@b_SpecificResults@a_SpecificShareable@shareable_outp_ls,
                                              output_data_dir_1L_chr = output_data_dir_1L_chr,
                                              predr_var_nms_chr = A@d_TTUReports@a_TTUSynopsis@b_SpecificResults@a_SpecificShareable@shareable_outp_ls$predr_vars_nms_ls %>% purrr::pluck(1),
                                              base_size_1L_dbl = 30,
