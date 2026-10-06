@@ -1,3 +1,6 @@
+# Paths
+Private/
+Private/*.R
 # History files
 .Rhistory
 .Rapp.history
