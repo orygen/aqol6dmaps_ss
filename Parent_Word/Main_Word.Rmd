@@ -95,8 +95,8 @@ print_indpnt_predrs_coefs_tbl <- function(params_ls,
 }
 ```
 
-```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE, warning=FALSE}
-```
+<!-- # ```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE, warning=FALSE} -->
+<!-- # ``` -->
 
 \newpage
 

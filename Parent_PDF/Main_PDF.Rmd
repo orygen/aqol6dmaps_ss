@@ -12,12 +12,12 @@
 classoptions: 
   - sn-vancouver      
   - Numbered      # Optional: Use numbered references instead of namedate references (only for sn-nature, sn-basic, sn-vancouver, sn-chicago, sn-mathphys or sn-nature)
-  # - referee       # Optional: Use double line spacing 
+  - referee       # Optional: Use double line spacing 
   # - lineno        # Optional: Add line numbers
   # - iicol         # Optional: Double column layour
 
 title: "`r params$X@title_1L_chr`" 
-titlerunning: Mapping psychological measures to health utility
+titlerunning: "Mapping psychological measures to health utility"
 
 authors:
   - firstname: Matthew
@@ -95,7 +95,7 @@ authors:
     particle: M
     lastname: Cotton
     #     email: sue.cotton@orygen.org.au
-    affiliation: [2,3]
+    affiliation: [2,3,7,8]
 
 affiliations:
   - number: 1
@@ -164,6 +164,24 @@ affiliations:
         city: Bruce
     #     postcode: 3011
     #  #   state: Victoria
+        country: Australia
+
+  - number: 7
+    corresponding: FALSE
+    info:
+      orgdiv: School of Psychological Sciences
+      orgname: Monash University
+    address:
+        city: Melbourne
+        country: Australia
+
+  - number: 8
+    corresponding: FALSE
+    info:
+      orgdiv: Turner Institute of Brain and Mental Health
+      orgname: Monash University
+    address:
+        city: Melbourne
         country: Australia
 
 

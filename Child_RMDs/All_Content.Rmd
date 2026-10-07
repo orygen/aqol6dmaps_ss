@@ -7,6 +7,14 @@ output: html_document
 X <- params$X
 ```
 
+\paragraph{Key points for decision makers}
+
+ - A key focus of mental health reform efforts in high income countries is strengthening access to appropriate primary mental health care supports for young people. However, the value for money claims of such investments are poorly understood. 
+ 
+- Evaluators of these initiatives often must rely on data extracted from administrative and treatment records that lack outcome measures with well understood willingness to pay values, making it more difficult to extract meaningful economic insights. 
+
+- Our study aimed to help address this gap by developing models that map a range of psychological distress, depression and anxiety measures that are collected in youth primary mental health services to health utility. These models can be used to derive QALYs, which are the preferred outcome measure for economic evaluations in many countries.
+
 ```{r echo = F}
 params_ls<- list(figures_in_body_lgl = X@figures_in_body_lgl,
                  output_type_1L_chr = X@outp_formats_chr[1],
@@ -23,26 +31,28 @@ results_ls <- params_ls$results_ls
 <!-- # References  -->
 
 <!-- <div id="refs"></div> -->
+
+# Declarations {-}
+
 \paragraph{Availability of data and materials}
 
 ```{r child="../Child_RMDs/MS_Available_Data_And_Resources.Rmd", echo=FALSE}
 ```
 
-\paragraph{Competing Interests}
+\paragraph{Competing interests}
 
 ```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
+```
+
+\paragraph{Ethical approval}
+
+```{r child="../Child_RMDs/MS_Ethics.Rmd", echo=FALSE}
 ```
 
 \paragraph{Funding}
 
 ```{r child="../Child_RMDs/MS_Funding.Rmd", echo=FALSE}
 ```
-
-\paragraph{Ethics}
-
-```{r child="../Child_RMDs/MS_Ethics.Rmd", echo=FALSE}
-```
-
 
 
 <!-- \printendnotes -->

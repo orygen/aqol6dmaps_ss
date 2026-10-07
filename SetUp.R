@@ -59,7 +59,12 @@ purrr::reduce(c("\\author*[1,2]{\\fnm{Matthew}", "\\author[2,3,1]{\\fnm{Caroline
               }) %>%
   writeLines(con = paste0(A@d_TTUReports@a_TTUSynopsis@a_Ready4showPaths@outp_data_dir_1L_chr,"/Reports/Manuscript_Submission/TeX Export/Manuscript.tex"))
 ###
-authorReport(renewSlot(A,"d_TTUReports@a_TTUSynopsis@rmd_fl_nms_ls", ready4show::make_rmd_fl_nms_ls(pdf_fl_nm_1L_chr = "TA_PDF")) %>% procureSlot("d_TTUReports@a_TTUSynopsis"),
+authorReport(renewSlot(A,"d_TTUReports@a_TTUSynopsis@rmd_fl_nms_ls", ready4show::make_rmd_fl_nms_ls(pdf_fl_nm_1L_chr = "TA_PDF")) %>% 
+               procureSlot("d_TTUReports@a_TTUSynopsis") %>%
+               renewSlot("b_SpecificResults@a_SpecificShareable@shareable_outp_ls",
+                         purrr::modify_at(A@d_TTUReports@a_TTUSynopsis@b_SpecificResults@a_SpecificShareable@shareable_outp_ls,
+                                          "results_ls", ~ append(A@d_TTUReports@a_TTUSynopsis@b_SpecificResults@a_SpecificShareable@shareable_outp_ls$results_ls, list(quality_assessment_tb = readxl::read_xlsx(paste0(output_data_dir_1L_chr, "/StudyChecklist.xlsx")))))
+                         ),
              consent_1L_chr = "Y", fl_nm_1L_chr = "Supplement", what_1L_chr = "Manuscript_Submission")
 #params_ls <- list(X = X)
 #params_ls$X@figures_in_body_lgl <- params_ls$X@tables_in_body_lgl <- F
